@@ -47,3 +47,28 @@ DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,tmdb.pro
 DOMAIN-KEYWORD,tmdb
 DOMAIN-KEYWORD,themoviedb
+
+# Yahoo
+DOMAIN-SUFFIX,yahoo.com
+DOMAIN-SUFFIX,yahoo.co.jp
+DOMAIN-SUFFIX,yahooapis.com
+DOMAIN-SUFFIX,mail.yahoo.com
+DOMAIN-SUFFIX,yimg.com
+DOMAIN-SUFFIX,yahoofs.com
+DOMAIN-SUFFIX,yahoofinanceapi.com
+DOMAIN-SUFFIX,yahoodns.net
+DOMAIN-SUFFIX,yahoomail.com
+DOMAIN-SUFFIX,yahoo.net
+DOMAIN-SUFFIX,yahoo.co.uk
+DOMAIN-SUFFIX,yahoo.com.cn
+DOMAIN-KEYWORD,yahoo
+DOMAIN-KEYWORD,yimg
+
+# Notion
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notion.site
+DOMAIN-SUFFIX,notionusercontent.com
+DOMAIN-SUFFIX,notion.com
+DOMAIN-SUFFIX,api.notion.com
+DOMAIN-SUFFIX,notion-static.com
+DOMAIN-KEYWORD,notion
