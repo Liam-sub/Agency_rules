@@ -164,4 +164,5 @@ DOMAIN-SUFFIX,archive.org
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,deepl.com
-DOMAIN-SUFFIX,grammarly.comDOMAIN-KEYWORD,notion
+DOMAIN-SUFFIX,grammarly.com
+DOMAIN-KEYWORD,notion
