@@ -1,24 +1,79 @@
 # creator：Liam
 # create date：2025-12-06 12:39
 
-DOMAIN-WILDCARD,www.gyg.*,DIRECT
-DOMAIN-KEYWORD,processon.com,DIRECT
-DOMAIN-KEYWORD,hub.axmax.cn,DIRECT
-URL-REGEX,*.appstorrent.*,DIRECT
-DOMAIN-WILDCARD,*.aijuli.com,DIRECT
-DOMAIN-WILDCARD,*.eastmoney.com,DIRECT
+DOMAIN-WILDCARD,www.gyg.*$
+DOMAIN-KEYWORD,processon.com
+DOMAIN-KEYWORD,hub.axmax.cn
+URL-REGEX,*.appstorrent.*$
+DOMAIN-WILDCARD,*.aijuli.com
+DOMAIN-WILDCARD,*.eastmoney.com
 
 # 国内直连(app)
-DOMAIN-WILDCARD,*.yuque.com,DIRECT
-DOMAIN-KEYWORD,aliyun.com,DIRECT
-DOMAIN-KEYWORD,amap.com,DIRECT
-DOMAIN-KEYWORD,qunar.com,DIRECT
-DOMAIN-KEYWORD,deepseek.com,DIRECT
+DOMAIN-WILDCARD,*.yuque.com
+DOMAIN-KEYWORD,aliyun.com
+DOMAIN-KEYWORD,amap.com
+DOMAIN-KEYWORD,qunar.com
+DOMAIN-KEYWORD,deepseek.com
 
 # 国内直连(工作系统)
-DOMAIN-KEYWORD,stage-wms2.thecopeservices.com,DIRECT
-DOMAIN-KEYWORD,stage-erp.thecopeservices.com,DIRECT
-DOMAIN-KEYWORD,acc-wms.thecopeservices.com,DIRECT
-DOMAIN-KEYWORD,erp.thecopeservices.com,DIRECT
-DOMAIN-KEYWORD,pre-wms.ehengjian.com,DIRECT
-DOMAIN,www.tapd.cn,DIRECT
+DOMAIN-KEYWORD,stage-wms2.thecopeservices.com
+DOMAIN-KEYWORD,stage-erp.thecopeservices.com
+DOMAIN-KEYWORD,acc-wms.thecopeservices.com
+DOMAIN-KEYWORD,erp.thecopeservices.com
+DOMAIN-KEYWORD,pre-wms.ehengjian.com
+DOMAIN,www.tapd.cn
+
+# DingTalk
+DOMAIN-SUFFIX,dingtalk.com
+DOMAIN-SUFFIX,dingtalk.cn
+DOMAIN-SUFFIX,dingtalkapps.com
+DOMAIN-SUFFIX,alicdn.com
+DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,taobao.com
+DOMAIN-SUFFIX,alibaba.com
+DOMAIN-KEYWORD,dingtalk
+DOMAIN-KEYWORD,ali
+
+# WeChat
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,wx.qq.com
+DOMAIN-SUFFIX,wximg.qq.com
+DOMAIN-SUFFIX,wxfile.qq.com
+DOMAIN-SUFFIX,wxapp.tc.qq.com
+DOMAIN-SUFFIX,idqqimg.com
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,video.qq.com
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-KEYWORD,wechat
+DOMAIN-KEYWORD,weixin
+
+# QQ
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,qqmail.com
+DOMAIN-SUFFIX,mail.qq.com
+DOMAIN-SUFFIX,qzone.qq.com
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,gtimg.cn
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,idqqimg.com
+DOMAIN-SUFFIX,qqvideo.cn
+DOMAIN-SUFFIX,imqq.com
+DOMAIN-KEYWORD,qq
+DOMAIN-KEYWORD,tencent
+
+# WPS
+DOMAIN-SUFFIX,wps.cn
+DOMAIN-SUFFIX,wps.com
+DOMAIN-SUFFIX,kingsoft.com
+DOMAIN-SUFFIX,ksosoft.com
+DOMAIN-SUFFIX,kdocs.cn
+DOMAIN-SUFFIX,mo.wpscdn.cn
+DOMAIN-SUFFIX,wpscdn.cn
+DOMAIN-SUFFIX,ks-cdn.com
+DOMAIN-KEYWORD,wps
+DOMAIN-KEYWORD,kingsoft
+
+
+
