@@ -37,84 +37,6 @@ DOMAIN-SUFFIX,quark.cn
 DOMAIN-SUFFIX,quark.com
 URL-REGEX,*.appstorrent.*$       #阿里巴巴矢量库
 
-# ==========================================
-# China Smartphone Brands
-# ==========================================
-
-# --- 华为 HUAWEI ---
-DOMAIN-SUFFIX,huawei.com
-DOMAIN-SUFFIX,huawei.cn
-DOMAIN-SUFFIX,hicloud.com
-DOMAIN-SUFFIX,vmall.com
-DOMAIN-SUFFIX,huaweistatic.com
-DOMAIN-SUFFIX,huawei.net
-
-# --- 荣耀 HONOR ---
-DOMAIN-SUFFIX,honor.com
-DOMAIN-SUFFIX,hihonor.com
-DOMAIN-SUFFIX,honor.cn
-
-# --- 小米 Xiaomi ---
-DOMAIN-SUFFIX,mi.com
-DOMAIN-SUFFIX,xiaomi.com
-DOMAIN-SUFFIX,miui.com
-DOMAIN-SUFFIX,xiaomistatic.com
-DOMAIN-SUFFIX,mi-img.com
-
-# --- 红米 Redmi（已包含在小米域名体系） ---
-# 无需额外补充
-
-# --- OPPO ---
-DOMAIN-SUFFIX,oppo.com
-DOMAIN-SUFFIX,oppo.cn
-DOMAIN-SUFFIX,oppomobile.com
-DOMAIN-SUFFIX,coloros.com
-
-# --- vivo ---
-DOMAIN-SUFFIX,vivo.com
-DOMAIN-SUFFIX,vivo.com.cn
-DOMAIN-SUFFIX,bbk.com
-DOMAIN-SUFFIX,funtouchos.com
-
-# --- 一加 OnePlus ---
-DOMAIN-SUFFIX,oneplus.com
-DOMAIN-SUFFIX,oneplus.net
-DOMAIN-SUFFIX,oneplusbbs.com
-
-# --- 努比亚 Nubia ---
-DOMAIN-SUFFIX,nubia.com
-
-# --- 联想 Lenovo / 摩托罗拉 Motorola ---
-DOMAIN-SUFFIX,lenovo.com
-DOMAIN-SUFFIX,lenovomm.com
-DOMAIN-SUFFIX,motorola.com
-DOMAIN-SUFFIX,mot.com
-
-# --- 魅族 Meizu ---
-DOMAIN-SUFFIX,meizu.com
-DOMAIN-SUFFIX,flyme.cn
-DOMAIN-SUFFIX,flymeos.com
-
-# --- 真我 realme ---
-DOMAIN-SUFFIX,realme.com
-DOMAIN-SUFFIX,realme.net
-
-# --- 中兴 ZTE ---
-DOMAIN-SUFFIX,zte.com.cn
-DOMAIN-SUFFIX,ztedevices.com
-
-# --- 酷派 Coolpad ---
-DOMAIN-SUFFIX,coolpad.com
-
-# --- 海信 Hisense ---
-DOMAIN-SUFFIX,hisense.com
-
-# --- 三星 SamSung ---
-DOMAIN-SUFFIX,samsung.com
-DOMAIN-SUFFIX,samsungapps.com
-DOMAIN-SUFFIX,samsungcloud.com
-DOMAIN-SUFFIX,samsungknox.com
-
 # --- 腾讯系 ---
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,weixin.qq.com
@@ -272,3 +194,83 @@ DOMAIN-SUFFIX,weibocdn.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhihuishu.com
+
+# ============================================================
+# China Smartphone Brands
+# ============================================================
+
+# --- 华为 HUAWEI ---
+DOMAIN-SUFFIX,huawei.com
+DOMAIN-SUFFIX,huawei.cn
+DOMAIN-SUFFIX,hicloud.com
+DOMAIN-SUFFIX,vmall.com
+DOMAIN-SUFFIX,huaweistatic.com
+DOMAIN-SUFFIX,huawei.net
+
+# --- 荣耀 HONOR ---
+DOMAIN-SUFFIX,honor.com
+DOMAIN-SUFFIX,hihonor.com
+DOMAIN-SUFFIX,honor.cn
+
+# --- 小米 Xiaomi ---
+DOMAIN-SUFFIX,mi.com
+DOMAIN-SUFFIX,xiaomi.com
+DOMAIN-SUFFIX,miui.com
+DOMAIN-SUFFIX,xiaomistatic.com
+DOMAIN-SUFFIX,mi-img.com
+
+# --- 红米 Redmi（已包含在小米域名体系） ---
+# 无需额外补充
+
+# --- OPPO ---
+DOMAIN-SUFFIX,oppo.com
+DOMAIN-SUFFIX,oppo.cn
+DOMAIN-SUFFIX,oppomobile.com
+DOMAIN-SUFFIX,coloros.com
+
+# --- vivo ---
+DOMAIN-SUFFIX,vivo.com
+DOMAIN-SUFFIX,vivo.com.cn
+DOMAIN-SUFFIX,bbk.com
+DOMAIN-SUFFIX,funtouchos.com
+
+# --- 一加 OnePlus ---
+DOMAIN-SUFFIX,oneplus.com
+DOMAIN-SUFFIX,oneplus.net
+DOMAIN-SUFFIX,oneplusbbs.com
+
+# --- 努比亚 Nubia ---
+DOMAIN-SUFFIX,nubia.com
+
+# --- 联想 Lenovo / 摩托罗拉 Motorola ---
+DOMAIN-SUFFIX,lenovo.com
+DOMAIN-SUFFIX,lenovomm.com
+DOMAIN-SUFFIX,motorola.com
+DOMAIN-SUFFIX,mot.com
+
+# --- 魅族 Meizu ---
+DOMAIN-SUFFIX,meizu.com
+DOMAIN-SUFFIX,flyme.cn
+DOMAIN-SUFFIX,flymeos.com
+
+# --- 真我 realme ---
+DOMAIN-SUFFIX,realme.com
+DOMAIN-SUFFIX,realme.net
+
+# --- 中兴 ZTE ---
+DOMAIN-SUFFIX,zte.com.cn
+DOMAIN-SUFFIX,ztedevices.com
+
+# --- 酷派 Coolpad ---
+DOMAIN-SUFFIX,coolpad.com
+
+# --- 海信 Hisense ---
+DOMAIN-SUFFIX,hisense.com
+
+# --- 三星 SamSung ---
+DOMAIN-SUFFIX,samsung.com
+DOMAIN-SUFFIX,samsungapps.com
+DOMAIN-SUFFIX,samsungcloud.com
+DOMAIN-SUFFIX,samsungknox.com
+
+
