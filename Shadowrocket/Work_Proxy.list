@@ -2,10 +2,24 @@
 # 工作系统代理
 # ====================================
 
-# ERP系统
+# --- ERP系统 ---
 DOMAIN,erp.thecopeservices.com
 DOMAIN,fb.thecopeservices.com
 DOMAIN,fb-v2.thecopeservices.com
 DOMAIN,uc.thecopeservices.com
 DOMAIN,bi.thecopeservices.com
 DOMAIN-SUFFIX,thecopeservices.com
+
+# --- 卡车系统 ---
+DOMAIN-SUFFIX,website.hyperlining.com
+DOMAIN-SUFFIX,www.saia.com
+DOMAIN-SUFFIX,999865.xyz
+DOMAIN-SUFFIX,traxltl.tql.com
+URL-REGEX,*.rlcarriers.*$
+
+# --- WMS系统 ---
+DOMAIN-SUFFIX,pro-wms.thecopeservices.com
+DOMAIN-SUFFIX,wms-cli.thecopeservices.com
+
+# --- 其他系统 ---
+DOMAIN-SUFFIX,yqn.com
