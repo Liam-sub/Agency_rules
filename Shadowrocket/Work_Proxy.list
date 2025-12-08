@@ -1,0 +1,11 @@
+# ====================================
+# 工作系统代理
+# ====================================
+
+# ERP系统
+DOMAIN,erp.thecopeservices.com
+DOMAIN,fb.thecopeservices.com
+DOMAIN,fb-v2.thecopeservices.com
+DOMAIN,uc.thecopeservices.com
+DOMAIN,bi.thecopeservices.com
+DOMAIN-SUFFIX,thecopeservices.com
