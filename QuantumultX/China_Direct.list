@@ -18,259 +18,157 @@ DOMAIN-KEYWORD,acc-wms.thecopeservices.com,China_Direct
 DOMAIN-KEYWORD,pre-wms.ehengjian.com,China_Direct
 DOMAIN-KEYWORD,www.tapd.cn,China_Direct
 
-# --- 阿里系 ---
-DOMAIN-SUFFIX,taobao.com,China_Direct
-DOMAIN-SUFFIX,tmall.com,China_Direct
-DOMAIN-SUFFIX,tmall.hk,China_Direct
-DOMAIN-SUFFIX,alicdn.com,China_Direct
-DOMAIN-SUFFIX,taobaocdn.com,China_Direct
-DOMAIN-SUFFIX,aliyun.com,China_Direct
-DOMAIN-SUFFIX,aliyuncs.com,China_Direct
-DOMAIN-SUFFIX,aliapp.org,China_Direct
-DOMAIN-SUFFIX,alipay.com,China_Direct
-DOMAIN-SUFFIX,alipayobjects.com,China_Direct
-DOMAIN-SUFFIX,cainiao.com,China_Direct
-DOMAIN-SUFFIX,cainiaoyizhan.com,China_Direct
-DOMAIN-SUFFIX,cnicloud.com,China_Direct
-DOMAIN-SUFFIX,fliggy.com,China_Direct
-DOMAIN-SUFFIX,fliggy.hk,China_Direct
-DOMAIN-SUFFIX,quark.cn,China_Direct
-DOMAIN-SUFFIX,quark.com,China_Direct
-DOMAIN-SUFFIX,iconfont.cn,China_Direct            #阿里矢量库
+########################
+# 支付 / 银行
+########################
+DOMAIN-KEYWORD,alipay,China_Direct
+DOMAIN-KEYWORD,tenpay,China_Direct
+DOMAIN-KEYWORD,bank,China_Direct
+DOMAIN-KEYWORD,icbc,China_Direct
+DOMAIN-KEYWORD,ccb,China_Direct
+DOMAIN-KEYWORD,abc,China_Direct
+DOMAIN-KEYWORD,bankcomm,China_Direct
+DOMAIN-KEYWORD,citic,China_Direct
+DOMAIN-KEYWORD,cebbank,China_Direct
+DOMAIN-KEYWORD,pingan,China_Direct
+DOMAIN-KEYWORD,alibank,China_Direct
 
-# --- 腾讯系 ---
-DOMAIN-SUFFIX,qq.com,China_Direct
-DOMAIN-SUFFIX,weixin.qq.com,China_Direct
-DOMAIN-SUFFIX,wechat.com,China_Direct
-DOMAIN-SUFFIX,tencent.com,China_Direct
-DOMAIN-SUFFIX,qpic.cn,China_Direct
-DOMAIN-SUFFIX,qlogo.cn,China_Direct
-DOMAIN-SUFFIX,tenpay.com,China_Direct
-DOMAIN-SUFFIX,work.weixin.qq.com,China_Direct
-DOMAIN-SUFFIX,workwechat.com,China_Direct
-DOMAIN-SUFFIX,wecomcdn.com,China_Direct
-DOMAIN-SUFFIX,voovmeeting.com,China_Direct
-DOMAIN-SUFFIX,meeting.tencent.com,China_Direct
-DOMAIN-SUFFIX,voovapp.cn,China_Direct
-DOMAIN-SUFFIX,yuanbao.tencent.com,China_Direct
-DOMAIN-SUFFIX,yuanbao.tech,China_Direct
-DOMAIN-SUFFIX,yuanbaoai.com,China_Direct
+########################
+# 电商平台
+########################
+# 淘宝 / 天猫 / 阿里系
+DOMAIN-KEYWORD,taobao,China_Direct
+DOMAIN-KEYWORD,tbcdn,China_Direct
+DOMAIN-KEYWORD,tmall,China_Direct
+DOMAIN-KEYWORD,alicdn,China_Direct
+DOMAIN-KEYWORD,alibaba,China_Direct
+DOMAIN-KEYWORD,eleme,China_Direct
 
-# --- 字节系 ---
-DOMAIN-SUFFIX,douyin.com,China_Direct
-DOMAIN-SUFFIX,bytecdn.cn,China_Direct
-DOMAIN-SUFFIX,bytescm.com,China_Direct
-DOMAIN-SUFFIX,zijieapi.com,China_Direct
+# 京东
+DOMAIN-KEYWORD,jd,China_Direct
+DOMAIN-KEYWORD,jingdong,China_Direct
+DOMAIN-KEYWORD,360buy,China_Direct
 
-# --- 京东系 ---
-DOMAIN-SUFFIX,jd.com,China_Direct
-DOMAIN-SUFFIX,360buyimg.com,China_Direct
-DOMAIN-SUFFIX,yiyaojd.com,China_Direct
+# 拼多多
+DOMAIN-KEYWORD,pinduoduo,China_Direct
+DOMAIN-KEYWORD,pddpic,China_Direct
+DOMAIN-KEYWORD,yangkeduo,China_Direct
 
-# --- 拼多多 ---
-DOMAIN-SUFFIX,pinduoduo.com,China_Direct
-DOMAIN-SUFFIX,yangkeduo.com,China_Direct
-DOMAIN-SUFFIX,pddpic.com,China_Direct
+########################
+# 生活服务
+########################
+DOMAIN-KEYWORD,meituan,China_Direct
+DOMAIN-KEYWORD,mt,China_Direct
+DOMAIN-KEYWORD,dianping,China_Direct
+DOMAIN-KEYWORD,meituanwaimai,China_Direct
+DOMAIN-KEYWORD,sf-express,China_Direct
+DOMAIN-KEYWORD,sfcdn,China_Direct
+DOMAIN-KEYWORD,cainiao,China_Direct
 
-# --- 美团系 ---
-DOMAIN-SUFFIX,meituan.com,China_Direct
-DOMAIN-SUFFIX,dpfile.com,China_Direct
-DOMAIN-SUFFIX,dianping.com,China_Direct
-DOMAIN-SUFFIX,meituan.net,China_Direct
-
-# --- 饿了么 ---
-DOMAIN-SUFFIX,ele.me,China_Direct
-
-# --- 大众点评 ---
-DOMAIN-SUFFIX,dianping.com,China_Direct
-
-# --- 飞猪 ---
-DOMAIN-SUFFIX,alitrip.com,China_Direct
-
-# --- 顺丰 ---
-DOMAIN-SUFFIX,sf-express.com,China_Direct
-DOMAIN-SUFFIX,sf-airlines.com,China_Direct
-DOMAIN-SUFFIX,sf-international.com,China_Direct
-
-# --- 迅雷 ---
-DOMAIN-SUFFIX,xunlei.com,China_Direct
-
-# --- 高德地图 ---
-DOMAIN-SUFFIX,amap.com,China_Direct
-DOMAIN-SUFFIX,a-map.cn,China_Direct
-
-# --- 百度 ---
-DOMAIN-SUFFIX,baidu.com,China_Direct
-DOMAIN-SUFFIX,baidubce.com,China_Direct
-DOMAIN-SUFFIX,bdimg.com,China_Direct
-DOMAIN-SUFFIX,bdstatic.com,China_Direct
-
-# --- Bilibili ---
-DOMAIN-SUFFIX,bilibili.com,China_Direct
-DOMAIN-SUFFIX,hdslb.com,China_Direct
-
-# --- 抖音 ---
-DOMAIN-SUFFIX,douyin.com,China_Direct
-DOMAIN-SUFFIX,iesdouyin.com,China_Direct
+########################
+# 视频 / 社交
+########################
+# 抖音系
 DOMAIN-KEYWORD,douyin,China_Direct
+DOMAIN-KEYWORD,byte,China_Direct
+DOMAIN-KEYWORD,bytedance,China_Direct
+DOMAIN-KEYWORD,ixigua,China_Direct
+DOMAIN-KEYWORD,toutiao,China_Direct
 
-# --- QQ 音乐 ---
-DOMAIN-SUFFIX,y.qq.com,China_Direct
-DOMAIN-SUFFIX,music.qq.com,China_Direct
+# 快手
+DOMAIN-KEYWORD,kuaishou,China_Direct
+DOMAIN-KEYWORD,kuaishouapp,China_Direct
 
-# --- 虎牙 ---
-DOMAIN-SUFFIX,huya.com,China_Direct
+# 小红书
+DOMAIN-KEYWORD,xiaohongshu,China_Direct
+DOMAIN-KEYWORD,redcdn,China_Direct
 
-# --- 得物 ---
-DOMAIN-SUFFIX,dewu.com,China_Direct
-DOMAIN-SUFFIX,poizon.com,China_Direct
+# B站
+DOMAIN-KEYWORD,bilibili,China_Direct
+DOMAIN-KEYWORD,biliapi,China_Direct
+DOMAIN-KEYWORD,acgvideo,China_Direct
 
-# --- 网易系 ---
-DOMAIN-SUFFIX,163.com,China_Direct
-DOMAIN-SUFFIX,126.com,China_Direct
-DOMAIN-SUFFIX,netease.com,China_Direct
+########################
+# 腾讯系
+########################
+DOMAIN-KEYWORD,wechat,China_Direct
+DOMAIN-KEYWORD,wx,China_Direct
+DOMAIN-KEYWORD,qq,China_Direct
+DOMAIN-KEYWORD,qzone,China_Direct
+DOMAIN-KEYWORD,weixin,China_Direct
+DOMAIN-KEYWORD,wecom,China_Direct
+DOMAIN-KEYWORD,work.weixin,China_Direct
 
-# --- 邮箱类 ---
-DOMAIN-SUFFIX,qqmail.com,China_Direct
-DOMAIN-SUFFIX,aliyun.com,China_Direct
+########################
+# 内容平台
+########################
+DOMAIN-KEYWORD,zhihu,China_Direct
+DOMAIN-KEYWORD,douban,China_Direct
+DOMAIN-KEYWORD,sina,China_Direct
+DOMAIN-KEYWORD,weibo,China_Direct
 
-# --- 银行类（通用） ---
-DOMAIN-SUFFIX,ccb.com,China_Direct
-DOMAIN-SUFFIX,icbc.com.cn,China_Direct
-DOMAIN-SUFFIX,bankcomm.com,China_Direct
-DOMAIN-SUFFIX,abchina.com,China_Direct
-DOMAIN-SUFFIX,cmbchina.com,China_Direct
-DOMAIN-SUFFIX,cmbimg.com,China_Direct
+########################
+# 出行服务
+########################
+DOMAIN-KEYWORD,12306,China_Direct
+DOMAIN-KEYWORD,china-railway,China_Direct
+DOMAIN-KEYWORD,qunar,China_Direct
+DOMAIN-KEYWORD,fliggy,China_Direct
 
-# --- 微信 / 企业微信 / 腾讯会议 ---
-DOMAIN-SUFFIX,wechat.com,China_Direct
-DOMAIN-SUFFIX,weixin.qq.com,China_Direct
-DOMAIN-SUFFIX,work.weixin.qq.com,China_Direct
-DOMAIN-SUFFIX,voovmeeting.com,China_Direct
+########################
+# 办公 / 云服务
+########################
+DOMAIN-KEYWORD,aliyun,China_Direct
+DOMAIN-KEYWORD,alibabacloud,China_Direct
+DOMAIN-KEYWORD,aliyundrive,China_Direct
+DOMAIN-KEYWORD,alimail,China_Direct
 
-# --- 12306 ---
-DOMAIN-SUFFIX,12306.cn,China_Direct
+########################
+# 手机品牌
+########################
+DOMAIN-KEYWORD,huawei,China_Direct
+DOMAIN-KEYWORD,mi,China_Direct
+DOMAIN-KEYWORD,xiaomi,China_Direct
+DOMAIN-KEYWORD,oppo,China_Direct
+DOMAIN-KEYWORD,realme,China_Direct
+DOMAIN-KEYWORD,vivo,China_Direct
+DOMAIN-KEYWORD,honor,China_Direct
+DOMAIN-KEYWORD,lenovo,China_Direct
+DOMAIN-KEYWORD,meizu,China_Direct
+DOMAIN-KEYWORD,zte,China_Direct
+DOMAIN-KEYWORD,oneplus,China_Direct
+DOMAIN-KEYWORD,samsung,China_Direct
 
-# --- 航旅类 ---
-DOMAIN-SUFFIX,umetrip.com,China_Direct
-DOMAIN-SUFFIX,variflight.com,China_Direct
-DOMAIN-SUFFIX,hangban.cc,China_Direct
+########################
+# 政务 / 本地服务
+########################
+DOMAIN-KEYWORD,mynanjing,China_Direct
 
-# --- 去哪儿 ---
-DOMAIN-SUFFIX,qunar.com,China_Direct
-DOMAIN-SUFFIX,qunarzz.com,China_Direct
-DOMAIN-SUFFIX,qnimg.com,China_Direct
+########################
+# 国内 AI
+########################
+DOMAIN-KEYWORD,deepseek,China_Direct
+DOMAIN-KEYWORD,yuanbao,China_Direct
 
-# --- 天文通 ---
-DOMAIN-SUFFIX,twtw.cc,China_Direct
-DOMAIN-SUFFIX,twte.cn,China_Direct
+########################
+# 其他网站
+########################
+DOMAIN-KEYWORD,dangdang,China_Direct
 
-# --- 东方财富 ---
-DOMAIN-SUFFIX,eastmoney.com,China_Direct
+########################
+# 国内 CDN
+########################
+DOMAIN-KEYWORD,cmcc,China_Direct
+DOMAIN-KEYWORD,ctyun,China_Direct
+DOMAIN-KEYWORD,cloud.tencent,China_Direct
+DOMAIN-KEYWORD,qcloud,China_Direct
+DOMAIN-KEYWORD,cdn,China_Direct
+DOMAIN-KEYWORD,cache,China_Direct
+DOMAIN-KEYWORD,cdn-cn,China_Direct
+DOMAIN-KEYWORD,baidubce,China_Direct
+DOMAIN-KEYWORD,ksyuncdn,China_Direct
+DOMAIN-KEYWORD,hwcdn,China_Direct
+DOMAIN-KEYWORD,tencent-cloud,China_Direct
 
-# --- 同花顺 ---
-DOMAIN-SUFFIX,10jqka.com.cn,China_Direct
 
-# --- 我 的 南京 ---
-DOMAIN-SUFFIX,nanjing.gov.cn,China_Direct
-DOMAIN-SUFFIX,jszwfw.gov.cn,China_Direct
 
-# --- DeepSeek 深度求索 ---
-DOMAIN-SUFFIX,deepseek.com,China_Direct
-DOMAIN-SUFFIX,deepseek.ai,China_Direct
-DOMAIN-SUFFIX,deepseekapi.com,China_Direct
-
-# --- 豆瓣 Douban ---
-DOMAIN-SUFFIX,douban.com,China_Direct
-DOMAIN-SUFFIX,doubanio.com,China_Direct
-
-# --- 新浪 SINA ---
-DOMAIN-SUFFIX,sina.com,China_Direct
-DOMAIN-SUFFIX,sina.com.cn,China_Direct
-DOMAIN-SUFFIX,sinaimg.cn,China_Direct
-DOMAIN-SUFFIX,weibo.com,China_Direct
-DOMAIN-SUFFIX,wbimg.cn,China_Direct
-DOMAIN-SUFFIX,weibocdn.com,China_Direct
-
-# --- 知乎 Zhihu ---
-DOMAIN-SUFFIX,zhihu.com,China_Direct
-DOMAIN-SUFFIX,zhimg.com,China_Direct
-DOMAIN-SUFFIX,zhihuishu.com,China_Direct
-
-# ============================================================
-# China Smartphone Brands
-# ============================================================
-
-# --- 华为 HUAWEI ---
-DOMAIN-SUFFIX,huawei.com,China_Direct
-DOMAIN-SUFFIX,huawei.cn,China_Direct
-DOMAIN-SUFFIX,hicloud.com,China_Direct
-DOMAIN-SUFFIX,vmall.com,China_Direct
-DOMAIN-SUFFIX,huaweistatic.com,China_Direct
-DOMAIN-SUFFIX,huawei.net,China_Direct
-
-# --- 荣耀 HONOR ---
-DOMAIN-SUFFIX,honor.com,China_Direct
-DOMAIN-SUFFIX,hihonor.com,China_Direct
-DOMAIN-SUFFIX,honor.cn,China_Direct
-
-# --- 小米 Xiaomi ---
-DOMAIN-SUFFIX,mi.com,China_Direct
-DOMAIN-SUFFIX,xiaomi.com,China_Direct
-DOMAIN-SUFFIX,miui.com,China_Direct
-DOMAIN-SUFFIX,xiaomistatic.com,China_Direct
-DOMAIN-SUFFIX,mi-img.com,China_Direct
-
-# --- 红米 Redmi（已包含在小米域名体系） ---
-# 无需额外补充
-
-# --- OPPO ---
-DOMAIN-SUFFIX,oppo.com,China_Direct
-DOMAIN-SUFFIX,oppo.cn,China_Direct
-DOMAIN-SUFFIX,oppomobile.com,China_Direct
-DOMAIN-SUFFIX,coloros.com,China_Direct
-
-# --- vivo ---
-DOMAIN-SUFFIX,vivo.com,China_Direct
-DOMAIN-SUFFIX,vivo.com.cn,China_Direct
-DOMAIN-SUFFIX,bbk.com,China_Direct
-DOMAIN-SUFFIX,funtouchos.com,China_Direct
-
-# --- 一加 OnePlus ---
-DOMAIN-SUFFIX,oneplus.com,China_Direct
-DOMAIN-SUFFIX,oneplus.net,China_Direct
-DOMAIN-SUFFIX,oneplusbbs.com,China_Direct
-
-# --- 努比亚 Nubia ---
-DOMAIN-SUFFIX,nubia.com,China_Direct
-
-# --- 联想 Lenovo / 摩托罗拉 Motorola ---
-DOMAIN-SUFFIX,lenovo.com,China_Direct
-DOMAIN-SUFFIX,lenovomm.com,China_Direct
-DOMAIN-SUFFIX,motorola.com,China_Direct
-DOMAIN-SUFFIX,mot.com,China_Direct
-
-# --- 魅族 Meizu ---
-DOMAIN-SUFFIX,meizu.com,China_Direct
-DOMAIN-SUFFIX,flyme.cn,China_Direct
-DOMAIN-SUFFIX,flymeos.com,China_Direct
-
-# --- 真我 realme ---
-DOMAIN-SUFFIX,realme.com,China_Direct
-DOMAIN-SUFFIX,realme.net,China_Direct
-
-# --- 中兴 ZTE ---
-DOMAIN-SUFFIX,zte.com.cn,China_Direct
-DOMAIN-SUFFIX,ztedevices.com,China_Direct
-
-# --- 酷派 Coolpad ---
-DOMAIN-SUFFIX,coolpad.com,China_Direct
-
-# --- 海信 Hisense ---
-DOMAIN-SUFFIX,hisense.com,China_Direct
-
-# --- 三星 SamSung ---
-DOMAIN-SUFFIX,samsung.com,China_Direct
-DOMAIN-SUFFIX,samsungapps.com,China_Direct
-DOMAIN-SUFFIX,samsungcloud.com,China_Direct
-DOMAIN-SUFFIX,samsungknox.com,China_Direct
