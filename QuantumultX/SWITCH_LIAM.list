@@ -1,1 +1,31 @@
-DOMAIN-KEYWORD,xiaohongshu, SWITCH_LIAM
+# ====================================================
+# 小红书规则
+# ====================================================
+
+# Xiaohongshu / 小红书
+DOMAIN-SUFFIX,xiaohongshu.com,SWITCH_LIAM
+DOMAIN-SUFFIX,xiaohongshu.net,SWITCH_LIAM
+DOMAIN-SUFFIX,xhslink.com,SWITCH_LIAM
+DOMAIN-SUFFIX,xhsapp.com,SWITCH_LIAM
+DOMAIN-SUFFIX,xhscdn.com,SWITCH_LIAM
+DOMAIN-SUFFIX,xhs.com,SWITCH_LIAM
+DOMAIN-SUFFIX,notes-aliyun.com,SWITCH_LIAM   # 官方阿里云资源域
+DOMAIN-SUFFIX,redcdn.net,SWITCH_LIAM
+DOMAIN-SUFFIX,redbook.com,SWITCH_LIAM        # 少数旧版本使用
+DOMAIN-SUFFIX,redapi.cn,SWITCH_LIAM          # API 线路（部分地区）
+DOMAIN-SUFFIX,redbook.io,SWITCH_LIAM         # 历史域名
+DOMAIN-SUFFIX,maimai.cn,SWITCH_LIAM          # 登录链路依赖（部分情况）
+
+# 小红书 CDN / 图片 / 视频资源
+DOMAIN-SUFFIX,byteimg.com,SWITCH_LIAM
+DOMAIN-SUFFIX,bytedance.net,SWITCH_LIAM
+DOMAIN-SUFFIX,ixigua.com,SWITCH_LIAM        # 视频底层可能走火山
+DOMAIN-SUFFIX,pstatp.com,SWITCH_LIAM
+DOMAIN-SUFFIX,alicdn.com,SWITCH_LIAM        # 阿里云图片资源
+DOMAIN-SUFFIX,aliyuncs.com,SWITCH_LIAM
+
+# 兜底关键字
+DOMAIN-KEYWORD,xhs,SWITCH_LIAM
+DOMAIN-KEYWORD,xiaohongshu,SWITCH_LIAM
+DOMAIN-KEYWORD,redbook,SWITCH_LIAM
+DOMAIN-KEYWORD,redcdn,SWITCH_LIAM
