@@ -112,6 +112,7 @@ DOMAIN-SUFFIX,hdslb.com,China_Direct
 # --- 抖音 ---
 DOMAIN-SUFFIX,douyin.com,China_Direct
 DOMAIN-SUFFIX,iesdouyin.com,China_Direct
+DOMAIN-KEYWORD,douyin,China_Direct
 
 # --- QQ 音乐 ---
 DOMAIN-SUFFIX,y.qq.com,China_Direct
