@@ -8,13 +8,15 @@ DOMAIN-WILDCARD,www.gyg.*$,China_Direct               #无名小站
 DOMAIN-KEYWORD,processon.com,China_Direct
 DOMAIN-KEYWORD,hub.axmax.cn,China_Direct
 DOMAIN-WILDCARD,*.aijuli.com,China_Direct             #Ai零距离
+DOMAIN-KEYWORD,appstorrent,China_Direct               #老毛子破解MacOS
+DOMAIN-KEYWORD,macwk.cn,China_Direct                  #Mac软件下载
 
 # 国内直连(工作系统)
 DOMAIN-KEYWORD,stage-wms2.thecopeservices.com,China_Direct
 DOMAIN-KEYWORD,stage-erp.thecopeservices.com,China_Direct
 DOMAIN-KEYWORD,acc-wms.thecopeservices.com,China_Direct
 DOMAIN-KEYWORD,pre-wms.ehengjian.com,China_Direct
-DOMAIN,www.tapd.cn,China_Direct
+DOMAIN-KEYWORD,www.tapd.cn,China_Direct
 
 # --- 阿里系 ---
 DOMAIN-SUFFIX,taobao.com,China_Direct
@@ -34,7 +36,7 @@ DOMAIN-SUFFIX,fliggy.com,China_Direct
 DOMAIN-SUFFIX,fliggy.hk,China_Direct
 DOMAIN-SUFFIX,quark.cn,China_Direct
 DOMAIN-SUFFIX,quark.com,China_Direct
-URL-REGEX,*.appstorrent.*$,China_Direct       #阿里巴巴矢量库
+DOMAIN-SUFFIX,iconfont.cn,China_Direct            #阿里矢量库
 
 # --- 腾讯系 ---
 DOMAIN-SUFFIX,qq.com,China_Direct
