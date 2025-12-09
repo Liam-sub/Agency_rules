@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,limbopro.com,PROXY_LIAM
 # DOMAIN-SUFFIX,googleusercontent.com,PROXY_LIAM
 # DOMAIN-SUFFIX,withgoogle.com,PROXY_LIAM
 # DOMAIN-SUFFIX,deepmind.com,PROXY_LIAM
-#DOMAIN-SUFFIX,x.company,PROXY_LIAM
+# DOMAIN-SUFFIX,x.company,PROXY_LIAM
 
 # --- YouTube ---
 DOMAIN-SUFFIX,youtube.com,PROXY_LIAM
@@ -76,10 +76,10 @@ DOMAIN-SUFFIX,redd.it,PROXY_LIAM
 DOMAIN-SUFFIX,redditstatic.com,PROXY_LIAM
 
 # --- TikTok (国际版) ---
-DOMAIN-SUFFIX,tiktok.com,PROXY_LIAM
-DOMAIN-SUFFIX,ttvnw.net,PROXY_LIAM
-DOMAIN-SUFFIX,tiktokcdn.com,PROXY_LIAM
-DOMAIN-SUFFIX,tik-tokapi.com,PROXY_LIAM
+# DOMAIN-SUFFIX,tiktok.com,PROXY_LIAM
+# DOMAIN-SUFFIX,ttvnw.net,PROXY_LIAM
+# DOMAIN-SUFFIX,tiktokcdn.com,PROXY_LIAM
+# DOMAIN-SUFFIX,tik-tokapi.com,PROXY_LIAM
 
 # --- Twitch ---
 DOMAIN-SUFFIX,twitch.tv,PROXY_LIAM
