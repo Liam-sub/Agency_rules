@@ -110,3 +110,4 @@ DOMAIN-SUFFIX,kwcdn.com,China_CDN_Direct
 # --- 抖音 CDN ---
 DOMAIN-SUFFIX,bytecdn.cn,China_CDN_Direct
 DOMAIN-SUFFIX,douyincdn.com,China_CDN_Direct
+DOMAIN-SUFFIX,zjcdn.com,China_CDN_Direct
