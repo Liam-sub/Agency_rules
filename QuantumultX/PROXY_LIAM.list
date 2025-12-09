@@ -123,8 +123,8 @@ DOMAIN-SUFFIX,metacritic.com,PROXY_LIAM
 DOMAIN-SUFFIX,trakt.tv,PROXY_LIAM
 DOMAIN-SUFFIX,letterboxd.com,PROXY_LIAM
 DOMAIN-SUFFIX,tmdb.org,PROXY_LIAM                       # The Movie Database
-DOMAIN-SUFFIX,themoviedb.org
-DOMAIN-SUFFIX,fanart.tv
+DOMAIN-SUFFIX,themoviedb.org,PROXY_LIAM  
+DOMAIN-SUFFIX,fanart.tv,PROXY_LIAM  
 
 # --- 流媒体播放器相关 ---
 DOMAIN-SUFFIX,plex.tv,PROXY_LIAM
