@@ -36,6 +36,8 @@ DOMAIN-SUFFIX,douyin.com,China_Direct
 DOMAIN-SUFFIX,iesdouyin.com,China_Direct
 DOMAIN-SUFFIX,ixigua.com,China_Direct
 DOMAIN-SUFFIX,huoshan.com,China_Direct
+DOMAIN-SUFFIX,soul.com,China_Direct
+
 
 # 已单独走分流规则
 # DOMAIN-SUFFIX,xiaohongshu.com,China_Direct
@@ -48,6 +50,11 @@ DOMAIN-SUFFIX,sina.cn,China_Direct
 
 DOMAIN-SUFFIX,zhihu.com,China_Direct
 
+# ===== 阿里系 =====
+DOMAIN-SUFFIX,sogou.com,China_Direct
+DOMAIN-SUFFIX,yuque.com,China_Direct
+DOMAIN-SUFFIX,dingtalk.com,China_Direct
+DOMAIN-SUFFIX,aliyun.com,China_Direct
 
 # ===== 电商平台 =====
 DOMAIN-SUFFIX,taobao.com,China_Direct
@@ -140,7 +147,6 @@ DOMAIN-SUFFIX,dujia.qunar.com,China_Travel
 DOMAIN-SUFFIX,dida365.com,China_Travel
 DOMAIN-SUFFIX,dida.cn,China_Travel
 
-
 DOMAIN-SUFFIX,yuanjourney.com,China_Direct
 DOMAIN-SUFFIX,yuan360.com,China_Direct
 DOMAIN-SUFFIX,yuanzo.com,China_Direct
@@ -207,7 +213,6 @@ DOMAIN-SUFFIX,vivo.com,China_Direct
 DOMAIN-SUFFIX,realme.com,China_Direct
 
 DOMAIN-SUFFIX,samsung.com,China_Direct
-
 
 # ===== 夸克浏览器 =====
 DOMAIN-SUFFIX,quark.cn,China_Direct
@@ -314,6 +319,7 @@ DOMAIN-SUFFIX,biliimg.com,China_Direct
 DOMAIN-SUFFIX,bstarstatic.com,China_Direct
 DOMAIN-SUFFIX,bstarapps.com,China_Direct
 DOMAIN-SUFFIX,bstarstatic.cn,China_Direct
+
 
 
 # ===== 国内 CDN（已去重，只保留必要） =====
