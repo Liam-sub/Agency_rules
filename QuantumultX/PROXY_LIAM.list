@@ -7,6 +7,9 @@
 # --- 代理 ---
 DOMAIN-SUFFIX,fcba.pro,PROXY_LIAM      #肥猫
 
+# --- 矢量库 ---
+DOMAIN-SUFFIX,igoutu.cn,PROXY_LIAM 
+
 # --- 去广告 ---
 DOMAIN-SUFFIX,limbopro.com,PROXY_LIAM
 
@@ -25,15 +28,15 @@ DOMAIN-SUFFIX,ytimg.com,PROXY_LIAM
 DOMAIN-SUFFIX,googlevideo.com,PROXY_LIAM
 
 # --- Netflix ---
-DOMAIN-SUFFIX,netflix.com,PROXY_LIAM
-DOMAIN-SUFFIX,nflximg.com,PROXY_LIAM
-DOMAIN-SUFFIX,nflxvideo.net,PROXY_LIAM
-DOMAIN-SUFFIX,nflxso.net,PROXY_LIAM
+# DOMAIN-SUFFIX,netflix.com,PROXY_LIAM
+# DOMAIN-SUFFIX,nflximg.com,PROXY_LIAM
+# DOMAIN-SUFFIX,nflxvideo.net,PROXY_LIAM
+# DOMAIN-SUFFIX,nflxso.net,PROXY_LIAM
 
 # --- Disney+ ---
-DOMAIN-SUFFIX,disneyplus.com,PROXY_LIAM
-DOMAIN-SUFFIX,bamgrid.com,PROXY_LIAM
-DOMAIN-SUFFIX,disney-plus.net,PROXY_LIAM
+# DOMAIN-SUFFIX,disneyplus.com,PROXY_LIAM
+# DOMAIN-SUFFIX,bamgrid.com,PROXY_LIAM
+# DOMAIN-SUFFIX,disney-plus.net,PROXY_LIAM
 
 # --- HBO / Max ---
 DOMAIN-SUFFIX,hbo.com,PROXY_LIAM
