@@ -201,3 +201,99 @@ DOMAIN-KEYWORD,notion,PROXY_LIAM
 # DOMAIN-KEYWORD,sms-activate.io,PROXY_LIAM
 # DOMAIN-KEYWORD,live.com,PROXY_LIAM
 # DOMAIN-KEYWORD,komari-document.pages.dev,PROXY_LIAM
+
+
+# ============================================================
+# Overseas CDN Providers - Domain Suffix Collection
+# ============================================================
+
+# Cloudflare
+DOMAIN-SUFFIX,cloudflare.com,PROXY_LIAM
+DOMAIN-SUFFIX,cloudflare.net,PROXY_LIAM
+DOMAIN-SUFFIX,cloudflareinsights.com,PROXY_LIAM
+DOMAIN-SUFFIX,cfassets.com,PROXY_LIAM
+DOMAIN-SUFFIX,cf-ipfs.com,PROXY_LIAM
+
+# Akamai
+DOMAIN-SUFFIX,akamai.com,PROXY_LIAM
+DOMAIN-SUFFIX,akamaihd.net,PROXY_LIAM
+DOMAIN-SUFFIX,akamaized.net,PROXY_LIAM
+DOMAIN-SUFFIX,edgesuite.net,PROXY_LIAM
+DOMAIN-SUFFIX,edgekey.net,PROXY_LIAM
+
+# Fastly
+DOMAIN-SUFFIX,fastly.net,PROXY_LIAM
+DOMAIN-SUFFIX,fastlylb.net,PROXY_LIAM
+DOMAIN-SUFFIX,fastly-terrarium.com,PROXY_LIAM
+
+# Amazon CloudFront
+DOMAIN-SUFFIX,cloudfront.net,PROXY_LIAM
+
+# Google CDN
+# DOMAIN-SUFFIX,googleapis.com,PROXY_LIAM
+# DOMAIN-SUFFIX,gstatic.com,PROXY_LIAM
+# DOMAIN-SUFFIX,googletagmanager.com,PROXY_LIAM
+# DOMAIN-SUFFIX,googlesyndication.com,PROXY_LIAM
+
+# Microsoft CDN
+DOMAIN-SUFFIX,msedge.net,PROXY_LIAM
+DOMAIN-SUFFIX,azureedge.net,PROXY_LIAM
+DOMAIN-SUFFIX,azurefd.net,PROXY_LIAM
+
+# StackPath / MaxCDN
+DOMAIN-SUFFIX,stackpathdns.com,PROXY_LIAM
+DOMAIN-SUFFIX,stackpathcdn.com,PROXY_LIAM
+DOMAIN-SUFFIX,maxcdn.com,PROXY_LIAM
+DOMAIN-SUFFIX,netdna-cdn.com,PROXY_LIAM
+DOMAIN-SUFFIX,netdna-ssl.com,PROXY_LIAM
+
+# Cloudflare R2 / Workers 相关
+DOMAIN-SUFFIX,workers.dev,PROXY_LIAM
+
+# CDN77
+DOMAIN-SUFFIX,cdn77.org,PROXY_LIAM
+DOMAIN-SUFFIX,cdn77.com,PROXY_LIAM
+
+# KeyCDN
+DOMAIN-SUFFIX,keycdn.com,PROXY_LIAM
+
+# BunnyCDN
+DOMAIN-SUFFIX,b-cdn.net,PROXY_LIAM
+DOMAIN-SUFFIX,bunnycdn.com,PROXY_LIAM
+
+# jsDelivr
+DOMAIN-SUFFIX,jsdelivr.net,PROXY_LIAM
+
+# CDNJS
+DOMAIN-SUFFIX,cdnjs.com,PROXY_LIAM
+
+# ImgIX（国外常用图片 CDN）
+DOMAIN-SUFFIX,imgix.net,PROXY_LIAM
+DOMAIN-SUFFIX,imgix.com,PROXY_LIAM
+
+# Firebase Hosting
+DOMAIN-SUFFIX,web.app,PROXY_LIAM
+DOMAIN-SUFFIX,firebaseapp.com,PROXY_LIAM
+
+# Cloudinary
+DOMAIN-SUFFIX,cloudinary.com,PROXY_LIAM
+
+# DigitalOcean Spaces CDN
+DOMAIN-SUFFIX,digitaloceanspaces.com,PROXY_LIAM
+
+# Wikipedia / Media CDN
+DOMAIN-SUFFIX,wikimedia.org,PROXY_LIAM
+DOMAIN-SUFFIX,wikipedia.org,PROXY_LIAM
+
+# Adobe
+DOMAIN-SUFFIX,typekit.net,PROXY_LIAM
+DOMAIN-SUFFIX,adobecdn.com,PROXY_LIAM
+
+# Shopify CDN
+DOMAIN-SUFFIX,shopify.com,PROXY_LIAM
+DOMAIN-SUFFIX,shopifycdn.com,PROXY_LIAM
+
+# SourceForge CDN
+DOMAIN-SUFFIX,sourceforge.net,PROXY_LIAM
+
+
