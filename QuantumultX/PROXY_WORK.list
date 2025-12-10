@@ -20,6 +20,7 @@ DOMAIN-KEYWORD,rlcarriers,PROXY_WORK
 
 # --- WMS系统 ---
 DOMAIN-SUFFIX,pro-wms.thecopeservices.com,PROXY_WORK
+DOMAIN-SUFFIX,pro-wms-api.thecopeservices.com,PROXY_WORK
 DOMAIN-SUFFIX,wms-cli.thecopeservices.com,PROXY_WORK
 
 # --- 其他系统 ---
