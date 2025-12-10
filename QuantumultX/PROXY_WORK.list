@@ -12,8 +12,8 @@ DOMAIN,bi.thecopeservices.com,PROXY_WORK
 
 
 # --- 卡车系统 ---
-DOMAIN-SUFFIX,website.hyperlining.com,PROXY_WORK
-DOMAIN-SUFFIX,www.saia.com,PROXY_WORK
+DOMAIN-SUFFIX,hyperlining.com,PROXY_WORK
+DOMAIN-SUFFIX,saia.com,PROXY_WORK
 DOMAIN-SUFFIX,999865.xyz,PROXY_WORK
 DOMAIN-SUFFIX,traxltl.tql.com,PROXY_WORK
 DOMAIN-KEYWORD,rlcarriers,PROXY_WORK
