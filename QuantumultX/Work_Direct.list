@@ -1,4 +1,4 @@
 # --- 国内直连(工作系统) ---
-DOMAIN-KEYWORD, stage-, China_Direct
-DOMAIN-KEYWORD, ehengjian, China_Direct
-DOMAIN-SUFFIX, acc-wms.thecopeservices.com, China_Direct             #WMS生产环境
+DOMAIN-KEYWORD, stage-, Work_Direct
+DOMAIN-KEYWORD, ehengjian, Work_Direct
+DOMAIN-SUFFIX, acc-wms.thecopeservices.com, Work_Direct             #WMS生产环境
