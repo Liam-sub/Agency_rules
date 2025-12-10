@@ -4,23 +4,28 @@
 # Create Time：2025-12-06 22:21
 # ============================================================
 
-DOMAIN-WILDCARD, www.gyg.*$, China_Direct               #无名小站
-DOMAIN-KEYWORD, processon.com, China_Direct
-DOMAIN-KEYWORD, hub.axmax.cn, China_Direct
-DOMAIN-WILDCARD, *.aijuli.com, China_Direct             #Ai零距离
+DOMAIN-SUFFIX, processon.com, China_Direct
+DOMAIN-SUFFIX, axmax.cn, China_Direct
+DOMAIN-SUFFIX, aijuli.com, China_Direct                 #Ai零距离
 DOMAIN-KEYWORD, appstorrent, China_Direct               #老毛子破解MacOS
-DOMAIN-KEYWORD, macwk.cn, China_Direct                  #Mac软件下载
+DOMAIN-SUFFIX, macwk.cn, China_Direct                   #Mac软件下载
 
-# 国内直连(工作系统)
+# --- 国内直连(工作系统) ---
 DOMAIN-KEYWORD, stage-wms2.thecopeservices.com, China_Direct
 DOMAIN-KEYWORD, stage-erp.thecopeservices.com, China_Direct
 DOMAIN-KEYWORD, acc-wms.thecopeservices.com, China_Direct
 DOMAIN-KEYWORD, pre-wms.ehengjian.com, China_Direct
 DOMAIN-KEYWORD, www.tapd.cn, China_Direct
 
-########################
-# 支付 / 银行
-########################
+# --- 无名小站（电影下载） ---
+DOMAIN-SUFFIX, gying.org, China_Direct
+DOMAIN-SUFFIX, gying.page, China_Direct
+DOMAIN-SUFFIX, gying.org, China_Direct
+DOMAIN-SUFFIX, gying.si, China_Direct
+DOMAIN-SUFFIX, gyg.la, China_Direct
+DOMAIN-SUFFIX, gyg.si, China_Direct
+
+# ============ 支付 / 银行 ============
 DOMAIN-KEYWORD, alipay, China_Direct
 DOMAIN-KEYWORD, tenpay, China_Direct
 DOMAIN-KEYWORD, bank, China_Direct
@@ -33,10 +38,10 @@ DOMAIN-KEYWORD, cebbank, China_Direct
 DOMAIN-KEYWORD, pingan, China_Direct
 DOMAIN-KEYWORD, alibank, China_Direct
 
-########################
-# 电商平台
-########################
-# 淘宝 / 天猫 / 阿里系
+
+# ============ 电商平台 ============
+
+# --- 阿里系（淘宝、天猫） ---
 DOMAIN-KEYWORD, taobao, China_Direct
 DOMAIN-KEYWORD, tbcdn, China_Direct
 DOMAIN-KEYWORD, tmall, China_Direct
@@ -44,82 +49,67 @@ DOMAIN-KEYWORD, alicdn, China_Direct
 DOMAIN-KEYWORD, alibaba, China_Direct
 DOMAIN-KEYWORD, eleme, China_Direct
 
-# 京东
+# --- 京东 ---
 DOMAIN-KEYWORD,jd,China_Direct
 DOMAIN-KEYWORD,jingdong,China_Direct
 DOMAIN-KEYWORD,360buy,China_Direct
 
-# 拼多多
+# --- 拼多多 ---
 DOMAIN-KEYWORD,pinduoduo,China_Direct
 DOMAIN-KEYWORD,pddpic,China_Direct
 DOMAIN-KEYWORD,yangkeduo,China_Direct
 
-########################
-# 生活服务
-########################
+# ============ 生活服务 ============
 DOMAIN-KEYWORD,meituan,China_Direct
-DOMAIN-KEYWORD,mt,China_Direct
 DOMAIN-KEYWORD,dianping,China_Direct
 DOMAIN-KEYWORD,meituanwaimai,China_Direct
 DOMAIN-KEYWORD,sf-express,China_Direct
 DOMAIN-KEYWORD,sfcdn,China_Direct
 DOMAIN-KEYWORD,cainiao,China_Direct
 
-########################
-# 视频 / 社交
-########################
-# 抖音系
+# ============ 短视频 / 社交 ============
+# --- 抖音系 ---
 DOMAIN-KEYWORD,douyin,China_Direct
 DOMAIN-KEYWORD,byte,China_Direct
 DOMAIN-KEYWORD,bytedance,China_Direct
 DOMAIN-KEYWORD,ixigua,China_Direct
 DOMAIN-KEYWORD,toutiao,China_Direct
 
-# 快手
+# --- 快手 ---
 DOMAIN-KEYWORD,kuaishou,China_Direct
 DOMAIN-KEYWORD,kuaishouapp,China_Direct
 
-# B站
+# --- B站 ---
 DOMAIN-KEYWORD,bilibili,China_Direct
 DOMAIN-KEYWORD,biliapi,China_Direct
 DOMAIN-KEYWORD,acgvideo,China_Direct
 
-########################
-# 腾讯系
-########################
+# ============ 腾讯系 ============
 DOMAIN-KEYWORD,wechat,China_Direct
 DOMAIN-KEYWORD,qzone,China_Direct
 DOMAIN-KEYWORD,weixin,China_Direct
 DOMAIN-KEYWORD,wecom,China_Direct
 DOMAIN-KEYWORD,work.weixin,China_Direct
 
-########################
-# 内容平台
-########################
+# ============ 论坛 ============
 DOMAIN-KEYWORD,zhihu,China_Direct
 DOMAIN-KEYWORD,douban,China_Direct
 DOMAIN-KEYWORD,sina,China_Direct
 DOMAIN-KEYWORD,weibo,China_Direct
 
-########################
-# 出行服务
-########################
+# ============ 出行服务 ============
 DOMAIN-KEYWORD,12306,China_Direct
 DOMAIN-KEYWORD,china-railway,China_Direct
 DOMAIN-KEYWORD,qunar,China_Direct
 DOMAIN-KEYWORD,fliggy,China_Direct
 
-########################
-# 办公 / 云服务
-########################
+# ============ 办公 / 云服务 ============
 DOMAIN-KEYWORD,aliyun,China_Direct
 DOMAIN-KEYWORD,alibabacloud,China_Direct
 DOMAIN-KEYWORD,aliyundrive,China_Direct
 DOMAIN-KEYWORD,alimail,China_Direct
 
-########################
-# 手机品牌
-########################
+# ============ 手机品牌（含三星） ============
 DOMAIN-KEYWORD,huawei,China_Direct
 DOMAIN-KEYWORD,mi,China_Direct
 DOMAIN-KEYWORD,xiaomi,China_Direct
@@ -133,30 +123,18 @@ DOMAIN-KEYWORD,zte,China_Direct
 DOMAIN-KEYWORD,oneplus,China_Direct
 DOMAIN-KEYWORD,samsung,China_Direct
 
-########################
-# 政务 / 本地服务
-########################
+# ============ 政务 / 本地服务 ============
 DOMAIN-KEYWORD,mynanjing,China_Direct
 
-########################
-# 国内 AI
-########################
+# ============ 国内Ai ============
 DOMAIN-KEYWORD,deepseek,China_Direct
 DOMAIN-KEYWORD,yuanbao,China_Direct
 
-########################
-# 其他网站
-########################
-DOMAIN-KEYWORD,dangdang,China_Direct
-
-########################
-# 国内 CDN
-########################
+# ============ 国内cdn ============
 DOMAIN-KEYWORD,cmcc,China_Direct
 DOMAIN-KEYWORD,ctyun,China_Direct
 DOMAIN-KEYWORD,cloud.tencent,China_Direct
 DOMAIN-KEYWORD,qcloud,China_Direct
-DOMAIN-KEYWORD,cdn,China_Direct
 DOMAIN-KEYWORD,cache,China_Direct
 DOMAIN-KEYWORD,cdn-cn,China_Direct
 DOMAIN-KEYWORD,baidubce,China_Direct
