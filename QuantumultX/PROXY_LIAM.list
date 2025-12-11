@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,fcba.pro,PROXY_LIAM      #肥猫
 # --- 矢量库 ---
 DOMAIN-SUFFIX,igoutu.cn,PROXY_LIAM
 DOMAIN-SUFFIX,icons8.com,PROXY_LIAM
+DOMAIN-KEYWORD,igoutu,PROXY_LIAM
 
 # --- 去广告 ---
 DOMAIN-SUFFIX,limbopro.com,PROXY_LIAM
