@@ -125,6 +125,7 @@ DOMAIN-SUFFIX,nytimes.com,Foreign_Proxy
 DOMAIN-SUFFIX,bbc.com,Foreign_Proxy
 DOMAIN-SUFFIX,cnn.com,Foreign_Proxy
 DOMAIN-SUFFIX,guardian.co.uk,Foreign_Proxy
+DOMAIN-SUFFIX,creaders.net,Foreign_Proxy        # 万维网
 
 # --- 影视评分类 ---
 DOMAIN-SUFFIX,imdb.com,Foreign_Proxy
@@ -300,7 +301,7 @@ DOMAIN-SUFFIX,sourceforge.net,Foreign_Proxy
 
 # Other
 DOMAIN-SUFFIX,8word.com,Foreign_Proxy
-DOMAIN-SUFFIX,creaders.net,Foreign_Proxy
+
 
 
 
