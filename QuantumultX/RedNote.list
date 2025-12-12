@@ -1,0 +1,31 @@
+# ====================================================
+# 小红书规则
+# ====================================================
+
+# Xiaohongshu / 小红书
+DOMAIN-SUFFIX,xiaohongshu.com,RedNote
+DOMAIN-SUFFIX,xiaohongshu.net,RedNote
+DOMAIN-SUFFIX,xhslink.com,RedNote
+DOMAIN-SUFFIX,xhsapp.com,RedNote
+DOMAIN-SUFFIX,xhscdn.com,RedNote
+DOMAIN-SUFFIX,xhs.com,RedNote
+DOMAIN-SUFFIX,notes-aliyun.com,RedNote   # 官方阿里云资源域
+DOMAIN-SUFFIX,redcdn.net,RedNote
+DOMAIN-SUFFIX,redbook.com,RedNote        # 少数旧版本使用
+DOMAIN-SUFFIX,redapi.cn,RedNote          # API 线路（部分地区）
+DOMAIN-SUFFIX,redbook.io,RedNote         # 历史域名
+DOMAIN-SUFFIX,maimai.cn,RedNote          # 登录链路依赖（部分情况）
+
+# 小红书 CDN / 图片 / 视频资源
+DOMAIN-SUFFIX,byteimg.com,RedNote
+DOMAIN-SUFFIX,bytedance.net,RedNote
+DOMAIN-SUFFIX,ixigua.com,RedNote        # 视频底层可能走火山
+DOMAIN-SUFFIX,pstatp.com,RedNote
+DOMAIN-SUFFIX,alicdn.com,RedNote        # 阿里云图片资源
+DOMAIN-SUFFIX,aliyuncs.com,RedNote
+
+# 兜底关键字
+DOMAIN-KEYWORD,xhs,RedNote
+DOMAIN-KEYWORD,xiaohongshu,RedNote
+DOMAIN-KEYWORD,redbook,RedNote
+DOMAIN-KEYWORD,redcdn,RedNote
