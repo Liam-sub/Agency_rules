@@ -130,6 +130,10 @@ DOMAIN,www.rfi.fr,Foreign_Proxy
 DOMAIN,www.dw.com,Foreign_Proxy
 DOMAIN,www.6park.com,Foreign_Proxy
 DOMAIN,zaobao.com.sg,Foreign_Proxy
+DOMAIN,china.kyodonews.net,Foreign_Proxy
+DOMAIN-SUFFIX,8world.com,Foreign_Proxy
+DOMAIN-KEYWORD,cnbeta.com,Foreign_Proxy
+
 
 
 # --- 影视评分类 ---
@@ -303,9 +307,6 @@ DOMAIN-SUFFIX,shopifycdn.com,Foreign_Proxy
 # SourceForge CDN
 DOMAIN-SUFFIX,sourceforge.net,Foreign_Proxy
 
-
-# Other
-DOMAIN-SUFFIX,8word.com,Foreign_Proxy
 
 
 
