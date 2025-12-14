@@ -10,6 +10,10 @@ DOMAIN-SUFFIX, axmax.cn, China_Direct
 DOMAIN-SUFFIX, aijuli.com, China_Direct                 #Ai零距离
 DOMAIN-SUFFIX, macwk.cn, China_Direct                   #Mac软件下载
 DOMAIN-SUFFIX, tapd.cn, China_Direct
+DOMAIN-SUFFIX,immersivetranslate.cn,China_Direct        #沉浸式翻译插件
+
+
+
 
 # --- 无名小站（电影下载） ---
 DOMAIN-KEYWORD, gying, China_Direct
@@ -50,6 +54,7 @@ DOMAIN-SUFFIX,sogou.com,China_Direct
 DOMAIN-SUFFIX,yuque.com,China_Direct
 DOMAIN-KEYWORD,dingtalk,China_Direct
 DOMAIN-SUFFIX,aliyun.com,China_Direct
+DOMAIN-SUFFIX,iconfont.cn,China_Direct      # 阿里巴巴矢量库
 
 # ===== 电商平台 =====
 DOMAIN-SUFFIX,taobao.com,China_Direct
@@ -322,6 +327,7 @@ DOMAIN-SUFFIX,bstarstatic.cn,China_Direct
 DOMAIN-SUFFIX,alicdn.com,China_Direct
 DOMAIN-SUFFIX,alipayobjects.com,China_Direct
 DOMAIN-SUFFIX,baidubce.com,China_Direct
+DOMAIN-SUFFIX,bdimg.com,China_Direct
 DOMAIN-SUFFIX,meituan.net,China_Direct
 
 DOMAIN-SUFFIX,bytecdn.cn,China_Direct
