@@ -48,7 +48,7 @@ DOMAIN-SUFFIX,zhihu.com,China_Direct
 # ===== 阿里系 =====
 DOMAIN-SUFFIX,sogou.com,China_Direct
 DOMAIN-SUFFIX,yuque.com,China_Direct
-DOMAIN-KEYWORD,dingtalk.com,China_Direct
+DOMAIN-KEYWORD,dingtalk,China_Direct
 DOMAIN-SUFFIX,aliyun.com,China_Direct
 
 # ===== 电商平台 =====
