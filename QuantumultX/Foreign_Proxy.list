@@ -104,6 +104,7 @@ DOMAIN-SUFFIX,githubusercontent.com,Foreign_Proxy
 DOMAIN-SUFFIX,gitlab.com,Foreign_Proxy
 DOMAIN-SUFFIX,bitbucket.org,Foreign_Proxy
 DOMAIN-SUFFIX,githubcopilot.com,Foreign_Proxy
+DOMAIN-SUFFIX,githubassets.com,Foreign_Proxy
 
 # --- Stack Overflow / 技术社区 ---
 DOMAIN-SUFFIX,stackoverflow.com,Foreign_Proxy
