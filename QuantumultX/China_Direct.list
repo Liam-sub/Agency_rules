@@ -52,9 +52,93 @@ DOMAIN-SUFFIX,zhihu.com,China_Direct
 # ===== 阿里系 =====
 DOMAIN-SUFFIX,sogou.com,China_Direct
 DOMAIN-SUFFIX,yuque.com,China_Direct
-DOMAIN-KEYWORD,dingtalk,China_Direct
-DOMAIN-SUFFIX,aliyun.com,China_Direct
+DOMAIN-KEYWORD,aliyun,China_Direct
+DOMAIN-KEYWORD,alibaba,China_Direct
 DOMAIN-SUFFIX,iconfont.cn,China_Direct      # 阿里巴巴矢量库
+
+# ---- Alibaba Group Core ----
+DOMAIN-SUFFIX,aliapp.org,China_Direct
+DOMAIN-SUFFIX,alicdn.com,China_Direct
+DOMAIN-SUFFIX,alikunlun.com,China_Direct
+
+
+# ---- Taobao / Tmall / Xianyu / Juhuasuan ----
+DOMAIN-SUFFIX,taobao.com,China_Direct
+DOMAIN-SUFFIX,tmall.com,China_Direct
+DOMAIN-SUFFIX,tmall.hk,China_Direct
+DOMAIN-SUFFIX,etao.com,China_Direct
+DOMAIN-SUFFIX,xianyu.com,China_Direct
+DOMAIN-SUFFIX,2.taobao.com,China_Direct
+DOMAIN-SUFFIX,juhuasuan.com,China_Direct
+DOMAIN-SUFFIX,ju.taobao.com,China_Direct
+
+
+# ---- Ant Group / Alipay ----
+DOMAIN-SUFFIX,antgroup.com,China_Direct
+DOMAIN-SUFFIX,alipay.com,China_Direct
+DOMAIN-SUFFIX,alipayobjects.com,China_Direct
+DOMAIN-SUFFIX,alipaydns.com,China_Direct
+DOMAIN-SUFFIX,mybank.cn,China_Direct
+DOMAIN-SUFFIX,mayibank.com,China_Direct
+DOMAIN-SUFFIX,zhima.credit,China_Direct
+DOMAIN-SUFFIX,zhimaxy.com,China_Direct
+
+# ---- Ele.me / Koubei ----
+DOMAIN-SUFFIX,ele.me,China_Direct
+DOMAIN-SUFFIX,elemecdn.com,China_Direct
+DOMAIN-SUFFIX,eleme.io,China_Direct
+DOMAIN-SUFFIX,koubei.com,China_Direct
+
+
+# ---- Youku / Damai / Alibaba Pictures ----
+DOMAIN-SUFFIX,youku.com,China_Direct
+DOMAIN-SUFFIX,ykimg.com,China_Direct
+DOMAIN-SUFFIX,ykcdn.com,China_Direct
+DOMAIN-SUFFIX,ykvcdn.com,China_Direct
+DOMAIN-SUFFIX,damai.cn,China_Direct
+DOMAIN-SUFFIX,damai.com,China_Direct
+
+
+# ---- Cainiao / Logistics ----
+DOMAIN-SUFFIX,cainiao.com,China_Direct
+DOMAIN-SUFFIX,cainiao-inc.com,China_Direct
+DOMAIN-SUFFIX,guoguo-app.com,China_Direct
+DOMAIN-SUFFIX,guoguo-cdn.com,China_Direct
+
+
+# ---- AliExpress / Lazada / Daraz / Trendyol ----
+DOMAIN-SUFFIX,aliexpress.com,China_Direct
+DOMAIN-SUFFIX,aliexpress.ru,China_Direct
+DOMAIN-SUFFIX,aliexpress.us,China_Direct
+DOMAIN-SUFFIX,lazada.com,China_Direct
+DOMAIN-SUFFIX,lazada.sg,China_Direct
+DOMAIN-SUFFIX,lazada.co.th,China_Direct
+DOMAIN-SUFFIX,lazada.vn,China_Direct
+DOMAIN-SUFFIX,lazada.co.id,China_Direct
+DOMAIN-SUFFIX,daraz.com,China_Direct
+DOMAIN-SUFFIX,trendyol.com,China_Direct
+
+
+# ---- DingTalk / Enterprise Services ----
+DOMAIN-KEYWORD,dingtalk.com,China_Direct
+DOMAIN-SUFFIX,teambition.com,China_Direct
+
+
+# ---- Amap / Gaode ----
+DOMAIN-SUFFIX,amap.com,China_Direct
+DOMAIN-SUFFIX,gaode.com,China_Direct
+DOMAIN-SUFFIX,autonavi.com,China_Direct
+DOMAIN-SUFFIX,autonavi.cn,China_Direct
+
+
+# ---- Data / Analytics / UC / Yunos ----
+DOMAIN-SUFFIX,umeng.com,China_Direct
+DOMAIN-SUFFIX,mmstat.com,China_Direct
+DOMAIN-SUFFIX,uc.cn,China_Direct
+DOMAIN-SUFFIX,ucweb.com,China_Direct
+DOMAIN-SUFFIX,yunos.com,China_Direct
+
+
 
 # ---- 字节 ----
 DOMAIN-SUFFIX,zijieapi.com,China_Direct
