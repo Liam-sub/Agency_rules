@@ -54,6 +54,7 @@ DOMAIN-SUFFIX,sogou.com,China_Direct
 DOMAIN-SUFFIX,yuque.com,China_Direct
 DOMAIN-KEYWORD,aliyun,China_Direct
 DOMAIN-KEYWORD,alibaba,China_Direct
+DOMAIN-KEYWORD,alipay,China_Direct
 DOMAIN-SUFFIX,iconfont.cn,China_Direct      # 阿里巴巴矢量库
 
 # ---- Alibaba Group Core ----
@@ -75,9 +76,7 @@ DOMAIN-SUFFIX,ju.taobao.com,China_Direct
 
 # ---- Ant Group / Alipay ----
 DOMAIN-SUFFIX,antgroup.com,China_Direct
-DOMAIN-SUFFIX,alipay.com,China_Direct
-DOMAIN-SUFFIX,alipayobjects.com,China_Direct
-DOMAIN-SUFFIX,alipaydns.com,China_Direct
+DOMAIN-KEYWORD,alipay,China_Direct
 DOMAIN-SUFFIX,mybank.cn,China_Direct
 DOMAIN-SUFFIX,mayibank.com,China_Direct
 DOMAIN-SUFFIX,zhima.credit,China_Direct
