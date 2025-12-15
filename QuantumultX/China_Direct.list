@@ -322,6 +322,30 @@ DOMAIN-SUFFIX,bstarstatic.com,China_Direct
 DOMAIN-SUFFIX,bstarapps.com,China_Direct
 DOMAIN-SUFFIX,bstarstatic.cn,China_Direct
 
+########################################
+# YOUKU / 优酷
+########################################
+DOMAIN-SUFFIX,youku.com,China_Direct
+DOMAIN-SUFFIX,ykimg.com,China_Direct
+DOMAIN-SUFFIX,ykpic.com,China_Direct
+DOMAIN-SUFFIX,ykcdn.com,China_Direct
+DOMAIN-SUFFIX,ykvcdn.com,China_Direct
+DOMAIN-SUFFIX,ykhd.com,China_Direct
+DOMAIN-SUFFIX,ykimgcdn.com,China_Direct
+
+# Player / API
+DOMAIN-SUFFIX,play.youku.com,China_Direct
+DOMAIN-SUFFIX,api.youku.com,China_Direct
+DOMAIN-SUFFIX,ups.youku.com,China_Direct
+DOMAIN-SUFFIX,passport.youku.com,China_Direct
+
+# Alibaba / Aliyun CDN (Youku 依赖)
+DOMAIN-SUFFIX,alicdn.com,China_Direct
+DOMAIN-SUFFIX,alipayobjects.com,China_Direct
+DOMAIN-SUFFIX,aliyuncdn.com,China_Direct
+DOMAIN-SUFFIX,aliapp.org,China_Direct
+DOMAIN-SUFFIX,alibabausercontent.com,China_Direct
+
 
 # ===== 国内 CDN（已去重，只保留必要） =====
 DOMAIN-SUFFIX,alicdn.com,China_Direct
