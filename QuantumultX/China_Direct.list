@@ -4,6 +4,7 @@
 # Create Time：2025-12-06 22:21
 # ============================================================
 
+
 DOMAIN-KEYWORD, appstorrent, China_Direct               #老毛子破解MacOS
 DOMAIN-SUFFIX, processon.com, China_Direct
 DOMAIN-SUFFIX, axmax.cn, China_Direct
@@ -11,8 +12,6 @@ DOMAIN-SUFFIX, aijuli.com, China_Direct                 #Ai零距离
 DOMAIN-SUFFIX, macwk.cn, China_Direct                   #Mac软件下载
 DOMAIN-SUFFIX, tapd.cn, China_Direct
 DOMAIN-SUFFIX,immersivetranslate.cn,China_Direct        #沉浸式翻译插件
-
-
 
 
 # --- 无名小站（电影下载） ---
@@ -31,8 +30,6 @@ DOMAIN-SUFFIX,qpic.cn,China_Direct
 DOMAIN-SUFFIX,qlogo.cn,China_Direct
 DOMAIN-SUFFIX,tencent.com,China_Direct
 
-DOMAIN-SUFFIX,douyin.com,China_Direct
-DOMAIN-SUFFIX,iesdouyin.com,China_Direct
 DOMAIN-SUFFIX,ixigua.com,China_Direct
 DOMAIN-SUFFIX,huoshan.com,China_Direct
 DOMAIN-SUFFIX,soul.com,China_Direct
@@ -69,14 +66,12 @@ DOMAIN-SUFFIX,tmall.com,China_Direct
 DOMAIN-SUFFIX,tmall.hk,China_Direct
 DOMAIN-SUFFIX,etao.com,China_Direct
 DOMAIN-SUFFIX,xianyu.com,China_Direct
-DOMAIN-SUFFIX,2.taobao.com,China_Direct
 DOMAIN-SUFFIX,juhuasuan.com,China_Direct
 DOMAIN-SUFFIX,ju.taobao.com,China_Direct
 
 
 # ---- Ant Group / Alipay ----
 DOMAIN-SUFFIX,antgroup.com,China_Direct
-DOMAIN-KEYWORD,alipay,China_Direct
 DOMAIN-SUFFIX,mybank.cn,China_Direct
 DOMAIN-SUFFIX,mayibank.com,China_Direct
 DOMAIN-SUFFIX,zhima.credit,China_Direct
@@ -94,6 +89,9 @@ DOMAIN-SUFFIX,youku.com,China_Direct
 DOMAIN-SUFFIX,ykimg.com,China_Direct
 DOMAIN-SUFFIX,ykcdn.com,China_Direct
 DOMAIN-SUFFIX,ykvcdn.com,China_Direct
+DOMAIN-SUFFIX,ykpic.com,China_Direct
+DOMAIN-SUFFIX,ykhd.com,China_Direct
+DOMAIN-SUFFIX,ykimgcdn.com,China_Direct
 DOMAIN-SUFFIX,damai.cn,China_Direct
 DOMAIN-SUFFIX,damai.com,China_Direct
 
@@ -138,29 +136,47 @@ DOMAIN-SUFFIX,ucweb.com,China_Direct
 DOMAIN-SUFFIX,yunos.com,China_Direct
 
 
-
 # ---- 字节 ----
-DOMAIN-SUFFIX,zijieapi.com,China_Direct
 
-# ===== 电商平台 =====
-DOMAIN-SUFFIX,taobao.com,China_Direct
-DOMAIN-SUFFIX,tmall.com,China_Direct
-DOMAIN-SUFFIX,alipay.com,China_Direct
-DOMAIN-SUFFIX,alibaba.com,China_Direct
-DOMAIN-SUFFIX,alicdn.com,China_Direct
+# ---- 国内核心域名 ----
+DOMAIN-SUFFIX, douyin.com, China_Direct
+DOMAIN-SUFFIX, douyin.cn, China_Direct
+DOMAIN-SUFFIX, douyinpayment.com, China_Direct
+DOMAIN-SUFFIX, douyinpic.com, China_Direct
+DOMAIN-SUFFIX, douyincdn.com, China_Direct
+DOMAIN-SUFFIX, douyinvod.com, China_Direct
+DOMAIN-SUFFIX, ixigua.com, China_Direct
+DOMAIN-SUFFIX, ixiguavideo.com, China_Direct
+DOMAIN-SUFFIX, snssdk.com, China_Direct
+DOMAIN-SUFFIX, iesdouyin.com, China_Direct
 
+# ---- 字节通用、安全服务域名 ----
+DOMAIN-SUFFIX, byteoversea.com, China_Direct
+DOMAIN-SUFFIX, byted.org, China_Direct
+DOMAIN-SUFFIX, bytecdn.cn, China_Direct
+DOMAIN-SUFFIX, byteimg.com, China_Direct
+DOMAIN-SUFFIX, bytedance.com, China_Direct
+DOMAIN-SUFFIX, bytedance.net, China_Direct
+DOMAIN-SUFFIX, volces.com, China_Direct
+DOMAIN-SUFFIX, feiliao.com, China_Direct
+DOMAIN-SUFFIX, amemv.com, China_Direct
+DOMAIN-SUFFIX, zijieapi.com, China_Direct
+
+# ---- 京东 ----
 DOMAIN-SUFFIX,jd.com,China_Direct
 DOMAIN-SUFFIX,jd.cn,China_Direct
 DOMAIN-SUFFIX,360buyimg.com,China_Direct
 
+# ---- 拼多多 ----
 DOMAIN-SUFFIX,pinduoduo.com,China_Direct
 DOMAIN-SUFFIX,yangkeduo.com,China_Direct
 
+# ---- 得物 ----
 DOMAIN-SUFFIX,dewume.com,China_Direct
 DOMAIN-SUFFIX,poizon.com,China_Direct
 
 
-# ===== 物流平台 =====
+# ---- 物流平台 ----
 DOMAIN-SUFFIX,sf-express.com,China_Direct
 DOMAIN-SUFFIX,sf.cn,China_Direct
 
@@ -175,15 +191,12 @@ DOMAIN-SUFFIX,sto.cn,China_Direct
 DOMAIN-SUFFIX,fcbox.com,China_Direct
 
 
-# ===== 生活服务 =====
+# ---- 美团 ----
 DOMAIN-SUFFIX,meituan.com,China_Direct
 DOMAIN-SUFFIX,dianping.com,China_Direct
 
-DOMAIN-SUFFIX,ele.me,China_Direct
-DOMAIN-SUFFIX,elemecdn.com,China_Direct
 
-
-# ===== 旅行 / 票务 / 酒店 / 圆周旅迹 =====
+# ---- 旅行 / 票务 / 酒店 / 圆周旅迹 ----
 
 # China_Travel_Sites
 DOMAIN-SUFFIX,ctrip.com,China_Travel
@@ -241,14 +254,14 @@ DOMAIN-SUFFIX,yuanzo.com,China_Direct
 DOMAIN-SUFFIX,yuanfangtrip.com,China_Direct
 DOMAIN-SUFFIX,travellingcircle.com,China_Direct
 
-# ===== 通信 / 运营商 =====
+# ---- 通信 / 运营商 ----
 DOMAIN-SUFFIX,139.com,China_Direct
 DOMAIN-SUFFIX,10086.cn,China_Direct
 DOMAIN-SUFFIX,10010.cn,China_Direct
 DOMAIN-SUFFIX,10000.cn,China_Direct
 
 
-# ===== 搜索引擎 =====
+# ---- 搜索引擎 ----
 DOMAIN-SUFFIX,baidu.com,China_Direct
 DOMAIN-SUFFIX,baiducontent.com,China_Direct
 DOMAIN-SUFFIX,baidupcs.com,China_Direct
@@ -260,21 +273,15 @@ DOMAIN-SUFFIX,haosou.com,China_Direct
 
 
 # ===== 视频平台 =====
-DOMAIN-SUFFIX,youku.com,China_Direct
 DOMAIN-SUFFIX,iqiyi.com,China_Direct
 DOMAIN-SUFFIX,iqiyipic.com,China_Direct
 DOMAIN-SUFFIX,tudou.com,China_Direct
-
-DOMAIN-SUFFIX,bilibili.com,China_Direct
-DOMAIN-SUFFIX,bilivideo.com,China_Direct
 
 DOMAIN-SUFFIX,kuaishou.com,China_Direct
 DOMAIN-SUFFIX,kuaishou.cn,China_Direct
 
 
 # ===== 支付 / 金融 =====
-DOMAIN-SUFFIX,alipay.com,China_Direct
-DOMAIN-SUFFIX,alipayobjects.com,China_Direct
 DOMAIN-SUFFIX,unionpay.cn,China_Direct
 DOMAIN-SUFFIX,unionpayintl.com,China_Direct
 DOMAIN-SUFFIX,tenpay.com,China_Direct
@@ -408,29 +415,6 @@ DOMAIN-SUFFIX,bstarstatic.com,China_Direct
 DOMAIN-SUFFIX,bstarapps.com,China_Direct
 DOMAIN-SUFFIX,bstarstatic.cn,China_Direct
 
-########################################
-# YOUKU / 优酷
-########################################
-DOMAIN-SUFFIX,youku.com,China_Direct
-DOMAIN-SUFFIX,ykimg.com,China_Direct
-DOMAIN-SUFFIX,ykpic.com,China_Direct
-DOMAIN-SUFFIX,ykcdn.com,China_Direct
-DOMAIN-SUFFIX,ykvcdn.com,China_Direct
-DOMAIN-SUFFIX,ykhd.com,China_Direct
-DOMAIN-SUFFIX,ykimgcdn.com,China_Direct
-
-# Player / API
-DOMAIN-SUFFIX,play.youku.com,China_Direct
-DOMAIN-SUFFIX,api.youku.com,China_Direct
-DOMAIN-SUFFIX,ups.youku.com,China_Direct
-DOMAIN-SUFFIX,passport.youku.com,China_Direct
-
-# Alibaba / Aliyun CDN (Youku 依赖)
-DOMAIN-SUFFIX,alicdn.com,China_Direct
-DOMAIN-SUFFIX,alipayobjects.com,China_Direct
-DOMAIN-SUFFIX,aliyuncdn.com,China_Direct
-DOMAIN-SUFFIX,aliapp.org,China_Direct
-DOMAIN-SUFFIX,alibabausercontent.com,China_Direct
 
 
 # ===== 国内 CDN（已去重，只保留必要） =====
