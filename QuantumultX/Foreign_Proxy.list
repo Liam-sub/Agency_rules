@@ -310,7 +310,8 @@ DOMAIN-SUFFIX,shopifycdn.com,Foreign_Proxy
 DOMAIN-SUFFIX,sourceforge.net,Foreign_Proxy
 
 
-
+# ---- trae Ai ----
+DOMAIN-SUFFIX,trae.ai,Foreign_Proxy
 
 
 
