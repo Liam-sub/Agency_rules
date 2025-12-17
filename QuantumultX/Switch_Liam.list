@@ -28,3 +28,12 @@ DOMAIN-SUFFIX,upgrade.xunlei.com,Switch_Liam
 # Pic / Static
 DOMAIN-SUFFIX,img.xunlei.com,Switch_Liam
 DOMAIN-SUFFIX,static.xunlei.com,Switch_Liam
+
+
+# --- Notion ---
+DOMAIN-SUFFIX,notion.so,Foreign_Proxy
+DOMAIN-SUFFIX,notion.site,Foreign_Proxy
+DOMAIN-SUFFIX,notion-static.com,Foreign_Proxy
+
+
+
