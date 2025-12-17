@@ -1,0 +1,55 @@
+# ============================
+# Author：Liam
+# Create Date：2025-12-17
+# ============================
+
+# ---- TikTok - Core ----
+DOMAIN-SUFFIX,tiktok.com,TikTok
+DOMAIN-SUFFIX,tiktokv.com,TikTok
+DOMAIN-SUFFIX,tiktokcdn.com,TikTok
+DOMAIN-SUFFIX,tiktokcdn-us.com,TikTok
+
+# ---- TikTok - API / App ----
+DOMAIN-SUFFIX,api.tiktokv.com,TikTok
+DOMAIN-SUFFIX,api-h2.tiktokv.com,TikTok
+DOMAIN-SUFFIX,api21-h2.tiktokv.com,TikTok
+DOMAIN-SUFFIX,api22-h2.tiktokv.com,TikTok
+DOMAIN-SUFFIX,ib.tiktokv.com,TikTok
+DOMAIN-SUFFIX,log.tiktokv.com,TikTok
+
+# ---- TikTok - Web / Open API ----
+DOMAIN-SUFFIX,open-api.tiktok.com,TikTok
+DOMAIN-SUFFIX,open.tiktokapis.com,TikTok
+DOMAIN-SUFFIX,developers.tiktok.com,TikTok
+
+# ---- TikTok - Media / CDN ----
+DOMAIN-SUFFIX,muscdn.com,TikTok
+DOMAIN-SUFFIX,p16-tiktokcdn-com.akamaized.net,TikTok
+DOMAIN-SUFFIX,v16.tiktokcdn.com,TikTok
+DOMAIN-SUFFIX,v16a.tiktokcdn.com,TikTok
+DOMAIN-SUFFIX,v16m.tiktokcdn.com,TikTok
+DOMAIN-SUFFIX,v19.tiktokcdn.com,TikTok
+
+# ---- TikTok - Webcast / Live ----
+DOMAIN-SUFFIX,webcast.tiktok.com,TikTok
+DOMAIN-SUFFIX,webcast.us.tiktok.com,TikTok
+
+# ---- TikTok - Ads / Business ----
+DOMAIN-SUFFIX,business-api.tiktok.com,TikTok
+DOMAIN-SUFFIX,ads.tiktok.com,TikTok
+DOMAIN-SUFFIX,ads.us.tiktok.com,TikTok
+DOMAIN-SUFFIX,analytics.tiktok.com,TikTok
+DOMAIN-SUFFIX,analytics.us.tiktok.com,TikTok
+DOMAIN-SUFFIX,creator-marketplace.tiktok.com,TikTok
+DOMAIN-SUFFIX,creator-marketplace-us.tiktok.com,TikTok
+
+# ---- TikTok - OAuth / Verify ----
+DOMAIN-SUFFIX,verification.tiktok.com,TikTok
+DOMAIN-SUFFIX,verification.us.tiktok.com,TikTok
+
+# ---- TikTok - Legacy (Musical.ly) ----
+DOMAIN-SUFFIX,musical.ly,TikTok
+DOMAIN-SUFFIX,api2.musical.ly,TikTok
+DOMAIN-SUFFIX,log2.musical.ly,TikTok
+
+
