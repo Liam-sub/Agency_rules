@@ -24,11 +24,6 @@ DOMAIN-SUFFIX,limbopro.com,Foreign_Proxy
 # DOMAIN-SUFFIX,deepmind.com,Foreign_Proxy
 # DOMAIN-SUFFIX,x.company,Foreign_Proxy
 
-# --- YouTube ---
-DOMAIN-SUFFIX,youtube.com,Foreign_Proxy
-DOMAIN-SUFFIX,ytimg.com,Foreign_Proxy
-DOMAIN-SUFFIX,googlevideo.com,Foreign_Proxy
-
 # --- Netflix ---
 # DOMAIN-SUFFIX,netflix.com,Foreign_Proxy
 # DOMAIN-SUFFIX,nflximg.com,Foreign_Proxy
@@ -67,11 +62,6 @@ DOMAIN-SUFFIX,facebook.com,Foreign_Proxy
 DOMAIN-SUFFIX,fbcdn.net,Foreign_Proxy
 DOMAIN-SUFFIX,whatsapp.com,Foreign_Proxy
 
-# --- Telegram ---
-# DOMAIN-SUFFIX,telegram.org,Foreign_Proxy
-# DOMAIN-SUFFIX,t.me,Foreign_Proxy
-# DOMAIN-SUFFIX,tdesktop.com,Foreign_Proxy
-
 # --- Twitter / X ---
 DOMAIN-SUFFIX,x.com,Foreign_Proxy
 DOMAIN-SUFFIX,twitter.com,Foreign_Proxy
@@ -83,10 +73,10 @@ DOMAIN-SUFFIX,redd.it,Foreign_Proxy
 DOMAIN-SUFFIX,redditstatic.com,Foreign_Proxy
 
 # --- TikTok (国际版) ---
-# DOMAIN-SUFFIX,tiktok.com,Foreign_Proxy
-# DOMAIN-SUFFIX,ttvnw.net,Foreign_Proxy
-# DOMAIN-SUFFIX,tiktokcdn.com,Foreign_Proxy
-# DOMAIN-SUFFIX,tik-tokapi.com,Foreign_Proxy
+DOMAIN-SUFFIX,tiktok.com,Foreign_Proxy
+DOMAIN-SUFFIX,ttvnw.net,Foreign_Proxy
+DOMAIN-SUFFIX,tiktokcdn.com,Foreign_Proxy
+DOMAIN-SUFFIX,tik-tokapi.com,Foreign_Proxy
 DOMAIN-KEYWORD,tokapi,Foreign_Proxy
 
 # --- Twitch ---
@@ -94,10 +84,10 @@ DOMAIN-SUFFIX,twitch.tv,Foreign_Proxy
 DOMAIN-SUFFIX,ttvnw.net,Foreign_Proxy
 
 # --- OpenAI / ChatGPT ---
-DOMAIN-SUFFIX,openai.com,Foreign_Proxy
-DOMAIN-SUFFIX,chatgpt.com,Foreign_Proxy
-DOMAIN-SUFFIX,oaistatic.com,Foreign_Proxy
-DOMAIN-SUFFIX,oaiusercontent.com,Foreign_Proxy
+# DOMAIN-SUFFIX,openai.com,Foreign_Proxy
+# DOMAIN-SUFFIX,chatgpt.com,Foreign_Proxy
+# DOMAIN-SUFFIX,oaistatic.com,Foreign_Proxy
+# DOMAIN-SUFFIX,oaiusercontent.com,Foreign_Proxy
 
 # --- Github / Git 系 ---
 DOMAIN-SUFFIX,github.com,Foreign_Proxy
@@ -176,10 +166,6 @@ DOMAIN-SUFFIX,dropbox.com,Foreign_Proxy
 DOMAIN-SUFFIX,box.com,Foreign_Proxy
 DOMAIN-SUFFIX,boxcdn.net,Foreign_Proxy
 
-# --- Notion ---
-DOMAIN-SUFFIX,notion.so,Foreign_Proxy
-DOMAIN-SUFFIX,notion.site,Foreign_Proxy
-DOMAIN-SUFFIX,notion-static.com,Foreign_Proxy
 
 # --- 国际常用网站 ---
 DOMAIN-SUFFIX,wikipedia.org,Foreign_Proxy
@@ -190,32 +176,6 @@ DOMAIN-SUFFIX,quora.com,Foreign_Proxy
 DOMAIN-SUFFIX,deepl.com,Foreign_Proxy
 DOMAIN-SUFFIX,grammarly.com,Foreign_Proxy
 DOMAIN-KEYWORD,notion,Foreign_Proxy
-
-
-
-# DOMAIN-KEYWORD,github.com,Foreign_Proxy
-# DOMAIN-KEYWORD,t.me,Foreign_Proxy
-# DOMAIN-KEYWORD,githubusercontent.com,Foreign_Proxy
-# DOMAIN-KEYWORD,speedship.com,Foreign_Proxy
-# DOMAIN-KEYWORD,rlcarriers.com,Foreign_Proxy
-# DOMAIN-KEYWORD,v2ex.com,Foreign_Proxy
-# DOMAIN-KEYWORD,greasyfork.org,Foreign_Proxy
-# DOMAIN-KEYWORD,hub.docker.com,Foreign_Proxy
-# DOMAIN-KEYWORD,reddit.com,Foreign_Proxy
-# DOMAIN-KEYWORD,x.com,Foreign_Proxy
-# DOMAIN-KEYWORD,githubassets.com,Foreign_Proxy
-# DOMAIN-KEYWORD,arcb.com,Foreign_Proxy
-# DOMAIN-KEYWORD,steamcommunity.com,Foreign_Proxy
-# DOMAIN-KEYWORD,steampowered.com,Foreign_Proxy
-# DOMAIN-KEYWORD,youtube.com,Foreign_Proxy
-# DOMAIN-KEYWORD,cloudflare.com,Foreign_Proxy
-# DOMAIN-KEYWORD,subhd.tv,Foreign_Proxy
-# DOMAIN-KEYWORD,api.themoviedb.org,Foreign_Proxy
-# DOMAIN-KEYWORD,spaceship.com,Foreign_Proxy
-# DOMAIN-KEYWORD,sms-activate.io,Foreign_Proxy
-# DOMAIN-KEYWORD,live.com,Foreign_Proxy
-# DOMAIN-KEYWORD,komari-document.pages.dev,Foreign_Proxy
-
 
 # ============================================================
 # Overseas CDN Providers - Domain Suffix Collection
@@ -309,14 +269,6 @@ DOMAIN-SUFFIX,shopifycdn.com,Foreign_Proxy
 
 # SourceForge CDN
 DOMAIN-SUFFIX,sourceforge.net,Foreign_Proxy
-
-
-# ---- trae Ai ----
-DOMAIN-SUFFIX,trae.ai,Foreign_Proxy
-DOMAIN-SUFFIX,traecdn.ai,Foreign_Proxy
-
-
-
 
 
 
