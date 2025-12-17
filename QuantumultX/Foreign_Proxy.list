@@ -175,7 +175,6 @@ DOMAIN-SUFFIX,medium.com,Foreign_Proxy
 DOMAIN-SUFFIX,quora.com,Foreign_Proxy
 DOMAIN-SUFFIX,deepl.com,Foreign_Proxy
 DOMAIN-SUFFIX,grammarly.com,Foreign_Proxy
-DOMAIN-KEYWORD,notion,Foreign_Proxy
 
 # ============================================================
 # Overseas CDN Providers - Domain Suffix Collection
