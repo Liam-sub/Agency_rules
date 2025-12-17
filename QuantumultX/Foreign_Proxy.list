@@ -72,13 +72,6 @@ DOMAIN-SUFFIX,reddit.com,Foreign_Proxy
 DOMAIN-SUFFIX,redd.it,Foreign_Proxy
 DOMAIN-SUFFIX,redditstatic.com,Foreign_Proxy
 
-# --- TikTok (国际版) ---
-DOMAIN-SUFFIX,tiktok.com,Foreign_Proxy
-DOMAIN-SUFFIX,ttvnw.net,Foreign_Proxy
-DOMAIN-SUFFIX,tiktokcdn.com,Foreign_Proxy
-DOMAIN-SUFFIX,tik-tokapi.com,Foreign_Proxy
-DOMAIN-KEYWORD,tiktok,Foreign_Proxy
-
 # --- Twitch ---
 DOMAIN-SUFFIX,twitch.tv,Foreign_Proxy
 DOMAIN-SUFFIX,ttvnw.net,Foreign_Proxy
