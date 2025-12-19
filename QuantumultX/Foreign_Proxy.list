@@ -4,6 +4,10 @@
 # Create Time：2025-12-06 22:32
 # ============================================================
 
+# --- 其他 ---
+DOMAIN-SUFFIX,unpkg.com,Foreign_Proxy
+DOMAIN-SUFFIX,tigress.cc,Foreign_Proxy
+
 # --- 代理 ---
 DOMAIN-SUFFIX,fcba.pro,Foreign_Proxy      #肥猫
 
@@ -264,5 +268,5 @@ DOMAIN-SUFFIX,shopifycdn.com,Foreign_Proxy
 DOMAIN-SUFFIX,sourceforge.net,Foreign_Proxy
 
 # 根据IP走代理
-GEOIP,US,Foreign_Proxy
+# GEOIP,US,Foreign_Proxy
 GEOIP,(AE|AR|AU|BM|BR|CA|CH|CL|DE|ES|FI|FR|GB|HK|ID|IL|JP|KP|MY|NL|NO|TH|TR|UM|US|ZA),Foreign_Proxy
