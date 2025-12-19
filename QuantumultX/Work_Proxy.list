@@ -1,6 +1,8 @@
-# ====================================
-# 工作系统代理
-# ====================================
+# =============================================
+# Author：Lima
+# Create Date：2025-12-19
+# Remark：工作系统代理
+# =============================================
 
 # --- ERP系统 ---
 DOMAIN,port.thecopeservices.com,Work_Proxy
@@ -30,35 +32,33 @@ DOMAIN-SUFFIX,wms-cli.thecopeservices.com,Work_Proxy
 DOMAIN-SUFFIX,yqn.com,Work_Proxy
 
 
-
-########################################
-# US COURIER / PARCEL (快递类)
-########################################
+# --- US COURIER / PARCEL (快递类) ---
 DOMAIN-SUFFIX,usps.com,Work_Proxy
 
-# UPS
+# --- UPS ---
 DOMAIN-SUFFIX,ups.com,Work_Proxy
 DOMAIN-SUFFIX,upsfreight.com,Work_Proxy
 DOMAIN-SUFFIX,tforcefreight.com,Work_Proxy
 
-# FedEx
+# --- FedEx ---
 DOMAIN-SUFFIX,fedex.com,Work_Proxy
 DOMAIN-SUFFIX,fedexfreight.fedex.com,Work_Proxy
 DOMAIN-SUFFIX,ftn.fedex.com,Work_Proxy
 DOMAIN-SUFFIX,fedexground.com,Work_Proxy
 
-# DHL
+# --- DHL ---
 DOMAIN-SUFFIX,dhl.com,Work_Proxy
 
-# Regional / Last Mile couriers
+# --- Regional / Last Mile couriers ---
 DOMAIN-SUFFIX,ontrac.com,Work_Proxy
 DOMAIN-SUFFIX,lasership.com,Work_Proxy
 DOMAIN-SUFFIX,xpo.com,Work_Proxy
 
-########################################
+# ==============================================
 # WWEX GROUP (WWEX + GlobalTranz + Unishippers)
-########################################
-# WWEX
+# ==============================================
+
+# --- WWEX ---
 DOMAIN-SUFFIX,wwex.com,Work_Proxy
 DOMAIN-SUFFIX,my.wwex.com,Work_Proxy
 DOMAIN-SUFFIX,api.wwex.com,Work_Proxy
@@ -66,18 +66,17 @@ DOMAIN-SUFFIX,nt.wwex.com,Work_Proxy
 DOMAIN-SUFFIX,newtms.wwex.com,Work_Proxy
 DOMAIN-SUFFIX,tracking.wwex.com,Work_Proxy
 
-# GlobalTranz
+# --- GlobalTranz ---
 DOMAIN-SUFFIX,globaltranz.com,Work_Proxy
 DOMAIN-SUFFIX,apps.globaltranz.com,Work_Proxy
 DOMAIN-SUFFIX,track.globaltranz.com,Work_Proxy
 
-# Unishippers
+# --- Unishippers ---
 DOMAIN-SUFFIX,unishippers.com,Work_Proxy
 DOMAIN-SUFFIX,my.unishippers.com,Work_Proxy
 
-########################################
-# LTL / FTL – MAJOR TRUCKING COMPANIES
-########################################
+
+# --- LTL / FTL – MAJOR TRUCKING COMPANIES ---
 DOMAIN-SUFFIX,jbhunt.com,Work_Proxy
 DOMAIN-SUFFIX,knight-swift.com,Work_Proxy
 DOMAIN-SUFFIX,odfl.com,Work_Proxy
@@ -91,9 +90,8 @@ DOMAIN-SUFFIX,centraltransport.com,Work_Proxy
 DOMAIN-SUFFIX,daytonfreight.com,Work_Proxy
 DOMAIN-SUFFIX,dohrn.com,Work_Proxy
 
-########################################
-# SMALL / REGIONAL / NICHE TRUCKING
-########################################
+
+# --- SMALL / REGIONAL / NICHE TRUCKING ---
 DOMAIN-SUFFIX,aaacooper.com,Work_Proxy
 DOMAIN-SUFFIX,averittexpress.com,Work_Proxy
 DOMAIN-SUFFIX,forwardair.com,Work_Proxy
