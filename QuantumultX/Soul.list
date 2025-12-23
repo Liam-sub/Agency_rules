@@ -1,0 +1,34 @@
+# ==============================
+# Author：Liam
+# Update Date：2025-12-23
+# ==============================
+
+# ===== Soul Core =====
+DOMAIN-SUFFIX,soulapp.cn
+
+# ===== API / IM =====
+DOMAIN,api.soulapp.cn
+DOMAIN,api-hl.soulapp.cn
+DOMAIN,api-bj.soulapp.cn
+DOMAIN,api-sh.soulapp.cn
+DOMAIN,im.soulapp.cn
+DOMAIN,ws.soulapp.cn
+
+# ===== Media =====
+DOMAIN,img.soulapp.cn
+DOMAIN,static.soulapp.cn
+DOMAIN,res.soulapp.cn
+
+# ===== Aliyun OSS / CDN =====
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,alicdn.com
+
+# ===== Push =====
+DOMAIN-SUFFIX,jpush.cn
+
+# ===== Analytics =====
+DOMAIN-SUFFIX,sensorsdata.cn
+DOMAIN-SUFFIX,sensorsdata.io
+DOMAIN-SUFFIX,umeng.com
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN,bugly.qq.com
