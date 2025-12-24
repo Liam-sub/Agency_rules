@@ -276,31 +276,3 @@ DOMAIN-SUFFIX,shopifycdn.com,Foreign_Proxy
 # SourceForge CDN
 DOMAIN-SUFFIX,sourceforge.net,Foreign_Proxy
 
-# 根据IP走代理
-GEOIP,US,Foreign_Proxy
-GEOIP,AE,Foreign_Proxy
-GEOIP,AR,Foreign_Proxy
-GEOIP,AU,Foreign_Proxy
-GEOIP,BM,Foreign_Proxy
-GEOIP,BR,Foreign_Proxy
-GEOIP,CA,Foreign_Proxy
-GEOIP,CH,Foreign_Proxy
-GEOIP,CL,Foreign_Proxy
-GEOIP,DE,Foreign_Proxy
-GEOIP,ES,Foreign_Proxy
-GEOIP,FI,Foreign_Proxy
-GEOIP,FR,Foreign_Proxy
-GEOIP,GB,Foreign_Proxy
-GEOIP,HK,Foreign_Proxy
-GEOIP,ID,Foreign_Proxy
-GEOIP,IL,Foreign_Proxy
-GEOIP,JP,Foreign_Proxy
-GEOIP,KP,Foreign_Proxy
-GEOIP,MY,Foreign_Proxy
-GEOIP,NL,Foreign_Proxy
-GEOIP,NO,Foreign_Proxy
-GEOIP,TH,Foreign_Proxy
-GEOIP,TR,Foreign_Proxy
-GEOIP,UM,Foreign_Proxy
-GEOIP,US,Foreign_Proxy
-GEOIP,ZA,Foreign_Proxy
