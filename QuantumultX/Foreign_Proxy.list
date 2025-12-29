@@ -13,9 +13,13 @@ DOMAIN-KEYWORD,meituge,Foreign_Proxy             # 美图阁
 DOMAIN-KEYWORD,cursor,Foreign_Proxy              # cursor
 
 # --- 矢量库 ---
-DOMAIN-SUFFIX,igoutu.cn,Foreign_Proxy
 DOMAIN-SUFFIX,icons8.com,Foreign_Proxy
-DOMAIN-KEYWORD,igoutu,Foreign_Proxy
+
+# --- igoutu（ps：有时候需要代理，有时不需要） ----
+#DOMAIN-SUFFIX,igoutu.cn,Foreign_Proxy
+#DOMAIN-KEYWORD,igoutu,Foreign_Proxy
+
+
 
 # --- 去广告 ---
 DOMAIN-SUFFIX,limbopro.com,Foreign_Proxy
