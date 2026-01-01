@@ -6,7 +6,7 @@
 DOMAIN-SUFFIX,fcba.pro,PROXY     #肥猫
 DOMAIN-SUFFIX,lingh.cfd,PROXY      #领航
 DOMAIN-SUFFIX,ssrsub.com,PROXY     #SSR
-DOMAIN-SUFFIX,aladingnet.xyz,PROXY       #阿拉丁
+DOMAIN-KEYWORD,aladingnet,PROXY       #阿拉丁
 DOMAIN-SUFFIX,vowa.lat,PROXY      #Vowa
 DOMAIN-SUFFIX,999865.xyz,PROXY     #冲上云霄
 DOMAIN-SUFFIX,mitce.net,PROXY     #mitce
