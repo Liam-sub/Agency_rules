@@ -1,117 +1,87 @@
-/*********************************
- * TMDB 剧集更新 Panel（参数驱动）
- * Egern / Surge 可用
- *********************************/
+/**********************
+ TMDB 追剧 Panel（Egern）
+ - 参数驱动
+ - 单请求串行
+ - 强制 $done
+**********************/
 
-function parseArgs(str) {
-  const o = {};
-  if (!str || typeof str !== "string") return o;
-  str.split("&").forEach(p => {
-    const [k, v] = p.split("=");
-    if (k) o[k] = decodeURIComponent(v || "");
-  });
-  return o;
+const args = $argument || "";
+
+function arg(k, d = "") {
+  const m = args.match(new RegExp(`${k}=([^&]+)`));
+  return m ? decodeURIComponent(m[1]) : d;
 }
 
-const cfg = parseArgs($argument);
+const TITLE = arg("title", "剧集更新");
+const ICON = arg("icon", "tv.fill");
+const COLOR = arg("color", "#FF9500");
+const TOKEN = arg("token", "");
 
-// ===== 基础配置 =====
-const TITLE = cfg.title || "剧集更新";
-const ICON = cfg.icon || "tv.fill";
-const COLOR = cfg.color || "#FF9500";
-const TOKEN = cfg.token;
+// 解析剧集参数
+let shows = [];
+for (let i = 1; i <= 10; i++) {
+  const id = arg(`show${i}_id`);
+  const name = arg(`show${i}_name`);
+  if (id && name) {
+    shows.push({ id, name });
+  }
+}
 
-// ===== 校验 token =====
-if (!TOKEN) {
+// ❗ 没 token 或没剧集 → 直接显示
+if (!TOKEN || shows.length === 0) {
   $done({
     title: TITLE,
-    content: "❌ 未配置 TMDB Token",
-    icon: "exclamationmark.triangle",
-    "icon-color": "#EF476F"
-  });
-  return;
-}
-
-// ===== 解析剧集列表 =====
-const SHOWS = [];
-let i = 1;
-while (cfg[`show${i}_id`]) {
-  SHOWS.push({
-    id: cfg[`show${i}_id`],
-    name: cfg[`show${i}_name`] || `剧集${i}`
-  });
-  i++;
-}
-
-if (SHOWS.length === 0) {
-  $done({
-    title: TITLE,
-    content: "❌ 未配置任何剧集",
-    icon: "exclamationmark.triangle",
-    "icon-color": "#EF476F"
-  });
-  return;
-}
-
-// ===== 工具函数 =====
-function today() {
-  return new Date().toISOString().slice(0, 10);
-}
-
-function httpGet(url) {
-  return new Promise(resolve => {
-    $httpClient.get(
-      {
-        url,
-        headers: {
-          Authorization: `Bearer ${TOKEN}`,
-          Accept: "application/json"
-        },
-        timeout: 5000
-      },
-      (err, resp, body) => {
-        if (err || !resp || resp.status !== 200) return resolve(null);
-        resolve(body);
-      }
-    );
+    content: "⚠️ 未配置 token 或剧集",
+    icon: ICON,
+    color: COLOR
   });
 }
 
-// ===== 主流程（顺序执行，避免 Panel 静默失败）=====
-(async () => {
-  const todayStr = today();
-  let content = "";
-  let hit = 0;
+// 只查第一个剧集，避免 timeout（Egern 核心点）
+const show = shows[0];
 
-  for (const s of SHOWS) {
-    const body = await httpGet(
-      `https://api.themoviedb.org/3/tv/${s.id}?language=zh-CN`
-    );
-    if (!body) continue;
+const url = `https://api.themoviedb.org/3/tv/${show.id}?language=zh-CN`;
 
-    try {
-      const show = JSON.parse(body);
-
-      if (
-        show.last_air_date === todayStr &&
-        show.last_episode_to_air
-      ) {
-        const ep = show.last_episode_to_air;
-        hit++;
-
-        content += `【${s.name}】\n`;
-        content += `🎬 S${ep.season_number}E${ep.episode_number}\n`;
-        content += `${ep.name || ""}\n\n`;
-      }
-    } catch (e) {}
+$httpClient.get({
+  url,
+  headers: {
+    Authorization: `Bearer ${TOKEN}`,
+    Accept: "application/json"
+  }
+}, (err, resp, body) => {
+  if (err || !body) {
+    finish(`❌ ${show.name}\n请求失败`);
+    return;
   }
 
-  if (!content) content = "今日暂无剧集更新 😴";
+  try {
+    const data = JSON.parse(body);
 
+    let text = `📺 ${show.name}\n`;
+
+    if (data.next_episode_to_air) {
+      const ep = data.next_episode_to_air;
+      text += `⏰ 下集：S${ep.season_number}E${ep.episode_number}\n`;
+      text += `📅 ${ep.air_date}`;
+    } else if (data.last_episode_to_air) {
+      const ep = data.last_episode_to_air;
+      text += `✅ 已更新：S${ep.season_number}E${ep.episode_number}`;
+    } else {
+      text += `暂无更新信息`;
+    }
+
+    finish(text);
+
+  } catch (e) {
+    finish(`❌ 数据解析失败`);
+  }
+});
+
+function finish(content) {
   $done({
     title: TITLE,
-    content: content.trim(),
+    content,
     icon: ICON,
-    "icon-color": hit > 0 ? COLOR : "#8E8E93"
+    color: COLOR
   });
-})();
+}
