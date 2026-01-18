@@ -1,8 +1,7 @@
 /**
- * TMDB 追剧看板（Egern 伪 Panel）
+ * TMDB 剧集更新 Panel（Egern 可识别版）
  */
 
-const TMDB_API_KEY = "92e05285c9b611b728e963fc7f3bb96b";
 const TMDB_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MmUwNTI4NWM5YjYxMWI3MjhlOTYzZmM3ZjNiYjk2YiIsIm5iZiI6MTc2ODQwMDcyMi42MTc5OTk4LCJzdWIiOiI2OTY3YTc1MmVhZjg5YzIwMmE4NjY1NDMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.crwmHTGpE_x5azP_O2lx6BaJt74Gk900XcR2A9Fvml4";
 
 const SHOWS = [
@@ -14,7 +13,7 @@ const SHOWS = [
 
 const UPCOMING_DAYS = 7;
 
-// ========== utils ==========
+// ========= utils =========
 function httpGet(url) {
   return new Promise(resolve => {
     $httpClient.get(
@@ -38,7 +37,7 @@ function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
-function diffDays(a, b) {
+function daysDiff(a, b) {
   return Math.ceil((new Date(b) - new Date(a)) / 86400000);
 }
 
@@ -47,7 +46,7 @@ function cnDate(d) {
   return `${x.getMonth() + 1}月${x.getDate()}日`;
 }
 
-// ========== main ==========
+// ========= main =========
 (async () => {
   const todayStr = today();
   const todayUpdated = [];
@@ -58,27 +57,32 @@ function cnDate(d) {
       .then(b => ({ meta: s, body: b }))
   );
 
-  const res = await Promise.all(tasks);
+  const results = await Promise.all(tasks);
 
-  res.forEach(r => {
+  results.forEach(r => {
     if (!r.body) return;
     try {
       const show = JSON.parse(r.body);
+
       const base = {
         name: show.name || r.meta.name,
         category: r.meta.category,
-        rating: show.vote_average?.toFixed(1) || "0.0",
+        rating: show.vote_average ? show.vote_average.toFixed(1) : "0.0",
         popularity: Math.round(show.popularity || 0)
       };
 
       if (show.last_air_date === todayStr && show.last_episode_to_air) {
         const e = show.last_episode_to_air;
-        todayUpdated.push({ ...base, s: e.season_number, e: e.episode_number });
+        todayUpdated.push({
+          ...base,
+          s: e.season_number,
+          e: e.episode_number
+        });
       }
 
       if (show.next_episode_to_air) {
         const e = show.next_episode_to_air;
-        const d = diffDays(todayStr, e.air_date);
+        const d = daysDiff(todayStr, e.air_date);
         if (d > 0 && d <= UPCOMING_DAYS) {
           future.push({
             ...base,
@@ -94,8 +98,8 @@ function cnDate(d) {
 
   future.sort((a, b) => a.d - b.d);
 
-  // ===== 输出看板内容 =====
-  let content = "📺 TMDB 追剧看板\n\n";
+  // ========= Panel 内容 =========
+  let content = "";
 
   if (todayUpdated.length) {
     content += "🎬 今日已更新\n";
@@ -116,12 +120,17 @@ function cnDate(d) {
     });
   }
 
-  if (!todayUpdated.length && !future.length) {
-    content += "近期暂无更新 😴";
-  }
+  if (!content) content = "近期暂无剧集更新 😴";
 
+  // ========= 关键：Egern Panel 识别锚点 =========
   $done({
-    title: "追剧看板",
-    content: content.trim()
+    title: "📺 TMDB 追剧",
+    content: content.trim(),
+    icon: "tv",
+    "icon-color": "#ff9500",
+    "update-time": new Date().toLocaleTimeString("zh-CN", {
+      hour: "2-digit",
+      minute: "2-digit"
+    })
   });
 })();
