@@ -12,7 +12,7 @@ const SHOWS = [
   { id: 101172, name: "吞噬星空", category: "国漫" },
   { id: 67063,  name: "一人之下", category: "国漫" },
   { id: 209867, name: "葬送的芙莉莲", category: "日漫"},
-  { id: 117465, name: "地狱乐", categorg: "日漫"},
+  { id: 117465, name: "地狱乐", category: "日漫"},
   { id: 249907, name: "判处勇者刑 刑罚勇者9004队服刑记录", category: "日漫" },
   { id: 139060, name: "魔都精兵的奴隶", category: "日漫" }
 ];
