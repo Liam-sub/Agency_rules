@@ -4,6 +4,14 @@
  ******************************/
 
 const args = $argument || "";
+const headers = cfg.tmdb_token
+  ? { Authorization: `Bearer ${cfg.tmdb_token}` }
+  : {};
+
+$httpClient.get(
+  { url, headers },
+  callback
+);
 
 function parseArgs(str) {
   const o = {};
