@@ -4,7 +4,7 @@
  ************************************/
 
 /*************** 可选配置 ***************/
-const TMDB_TOKEN = ""; // 可留空，不强制
+const TMDB_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MmUwNTI4NWM5YjYxMWI3MjhlOTYzZmM3ZjNiYjk2YiIsIm5iZiI6MTc2ODQwMDcyMi42MTc5OTk4LCJzdWIiOiI2OTY3YTc1MmVhZjg5YzIwMmE4NjY1NDMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.crwmHTGpE_x5azP_O2lx6BaJt74Gk900XcR2A9Fvml4"; // 可留空，不强制
 
 const SHOWS = [
   { id: 30984,  name: "死神：千年血战", category: "日漫" },
