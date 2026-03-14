@@ -1,33 +1,38 @@
 const params = getParams($argument || "");
-const cityId = params.cityId || "101190401";
+const city = params.city || "nanjing";
 
-const apiUrl = `http://aider.meizu.com/app/weather/listWeather?cityIds=${cityId}`;
+// 魅族天气 API
+const api = `https://aider.meizu.com/app/weather/listWeather?cityIds=${city}`;
 
-$httpClient.get(apiUrl, (error, response, data) => {
+$httpClient.get(api, (err, resp, data) => {
 
-  if (error || !data) {
+  if (err || !data) {
     render(errorView("天气获取失败"));
     return;
   }
 
   try {
 
-    const weatherData = JSON.parse(data);
+    const json = JSON.parse(data);
 
-    if (weatherData.status !== 200) {
-      render(errorView("接口返回异常"));
+    if (!json.value || !json.value[0]) {
+      render(errorView("天气数据为空"));
       return;
     }
 
-    const cityInfo = weatherData.cityInfo;
-    const today = weatherData.data.forecast[0];
+    const weather = json.value[0];
 
-    const city = cityInfo.city;
-    const weather = today.type;
-    const temp = `${today.low} ${today.high}`;
-    const humidity = weatherData.data.shidu;
-    const quality = weatherData.data.quality;
-    const wind = `${today.fx} ${today.fl}`;
+    const cityName = weather.city;
+    const realtime = weather.realtime;
+    const today = weather.weathers[0];
+
+    const temp = `${realtime.temp}℃`;
+    const weatherText = realtime.weather;
+    const wind = `${realtime.wD} ${realtime.wS}`;
+    const humidity = `${realtime.sD}%`;
+    const air = realtime.aqi;
+
+    const highLow = `${today.temperature}`;
     const sunrise = today.sunrise;
     const sunset = today.sunset;
 
@@ -38,23 +43,28 @@ $httpClient.get(apiUrl, (error, response, data) => {
         VStack(
 
           HStack(
-            Text(`📍 ${city}`).font(16).bold(),
+            Text(`📍 ${cityName}`).font(16).bold(),
             Spacer(),
-            Text(weather).font(16)
+            Text(weatherText).font(16)
           ),
 
           Spacer(8),
 
           Text(`🌡 ${temp}`)
-            .font(24)
+            .font(26)
             .bold(),
+
+          Spacer(6),
+
+          Text(`今日 ${highLow}`)
+            .font(14),
 
           Spacer(6),
 
           HStack(
             Text(`💧 ${humidity}`),
             Spacer(),
-            Text(`🌬 ${quality}`)
+            Text(`🌬 AQI ${air}`)
           ),
 
           Spacer(6),
@@ -75,7 +85,7 @@ $httpClient.get(apiUrl, (error, response, data) => {
 
   } catch (e) {
 
-    render(errorView("解析天气失败"));
+    render(errorView("解析失败"));
 
   }
 
@@ -87,7 +97,7 @@ function getParams(param) {
     param
       .split("&")
       .map(i => i.split("="))
-      .map(([k, v]) => [k, decodeURIComponent(v)])
+      .map(([k,v]) => [k, decodeURIComponent(v)])
   );
 }
 
