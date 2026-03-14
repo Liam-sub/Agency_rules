@@ -5,81 +5,97 @@ const apiUrl = `http://t.weather.sojson.com/api/weather/city/${cityId}`;
 
 $httpClient.get(apiUrl, (error, response, data) => {
 
-  if (error) {
+  if (error || !data) {
     render(errorView("天气获取失败"));
     return;
   }
 
-  const weatherData = JSON.parse(data);
+  try {
 
-  const city = weatherData.cityInfo.city;
-  const today = weatherData.data.forecast[0];
+    const weatherData = JSON.parse(data);
 
-  const temp = `${today.low} ${today.high}`;
-  const wind = `${today.fx} ${today.fl}`;
-  const humidity = weatherData.data.shidu;
-  const quality = weatherData.data.quality;
+    if (weatherData.status !== 200) {
+      render(errorView("接口返回异常"));
+      return;
+    }
 
-  render(
-    Widget(
-      {
-        padding: 16
-      },
+    const cityInfo = weatherData.cityInfo;
+    const today = weatherData.data.forecast[0];
 
-      VStack(
+    const city = cityInfo.city;
+    const weather = today.type;
+    const temp = `${today.low} ${today.high}`;
+    const humidity = weatherData.data.shidu;
+    const quality = weatherData.data.quality;
+    const wind = `${today.fx} ${today.fl}`;
+    const sunrise = today.sunrise;
+    const sunset = today.sunset;
 
-        HStack(
-          Text(`📍 ${city}`).font(16).bold(),
-          Spacer(),
-          Text(today.type).font(16)
-        ),
+    render(
+      Widget(
+        { padding: 16 },
 
-        Spacer(6),
+        VStack(
 
-        Text(`🌡 ${temp}`)
-          .font(24)
-          .bold(),
+          HStack(
+            Text(`📍 ${city}`).font(16).bold(),
+            Spacer(),
+            Text(weather).font(16)
+          ),
 
-        Spacer(6),
+          Spacer(8),
 
-        HStack(
-          Text(`💧 ${humidity}`),
-          Spacer(),
-          Text(`🌬 ${quality}`)
-        ),
+          Text(`🌡 ${temp}`)
+            .font(24)
+            .bold(),
 
-        Spacer(6),
+          Spacer(6),
 
-        Text(`🪁 ${wind}`),
+          HStack(
+            Text(`💧 ${humidity}`),
+            Spacer(),
+            Text(`🌬 ${quality}`)
+          ),
 
-        Spacer(6),
+          Spacer(6),
 
-        HStack(
-          Text(`🌅 ${today.sunrise}`),
-          Spacer(),
-          Text(`🌇 ${today.sunset}`)
+          Text(`🪁 ${wind}`),
+
+          Spacer(6),
+
+          HStack(
+            Text(`🌅 ${sunrise}`),
+            Spacer(),
+            Text(`🌇 ${sunset}`)
+          )
+
         )
-
       )
-    )
-  );
+    );
+
+  } catch (e) {
+
+    render(errorView("解析天气失败"));
+
+  }
 
 });
-
 
 function getParams(param) {
   if (!param) return {};
   return Object.fromEntries(
-    param.split("&").map(i => i.split("=")).map(([k,v]) => [k,decodeURIComponent(v)])
+    param
+      .split("&")
+      .map(i => i.split("="))
+      .map(([k, v]) => [k, decodeURIComponent(v)])
   );
 }
 
-
 function errorView(msg){
   return Widget(
-    {},
+    { padding: 16 },
     VStack(
-      Text("天气"),
+      Text("天气").font(18).bold(),
       Spacer(8),
       Text(msg)
     )
