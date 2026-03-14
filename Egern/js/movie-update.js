@@ -1,113 +1,108 @@
 /**
- * TMDB 追剧助手 - Egern 专用版
- * 对齐 YAML 配置: TMDB_TOKEN, UPCOMING_DAYS, SHOWS_LIST
+ * TMDB Tracker for Egern - 全面修复版
  */
 
 class TMDBTracker {
   constructor() {
-    // 1. 直接从 Egern 环境变量读取
-    this.token = $env.TMDB_TOKEN;
-    this.upcomingDays = parseInt($env.UPCOMING_DAYS || 7);
-    this.rawList = $env.SHOWS_LIST || "";
+    // 关键修复：兼容部分 Egern 版本可能通过 $argument 传参
+    const env = (typeof $env !== "undefined") ? $env : (typeof $argument !== "undefined" ? $argument : {});
     
-    this.todayStr = new Date().toISOString().slice(0, 10);
+    this.token = env.TMDB_TOKEN;
+    this.days = parseInt(env.UPCOMING_DAYS || 7);
+    this.rawList = env.SHOWS_LIST || "";
+    
+    // 关键修复：处理北京时间 (UTC+8)
+    const now = new Date();
+    const offset = 8 * 60 * 60 * 1000; 
+    this.todayStr = new Date(now.getTime() + offset).toISOString().slice(0, 10);
   }
 
-  // 解析 "ID:分类, ID:分类" 格式
   parseShows() {
     if (!this.rawList) return [];
     return this.rawList.split(',').map(item => {
-      const [id, category] = item.trim().split(':');
-      return { id: id.trim(), category: category || "剧集" };
-    });
+      const parts = item.trim().split(':');
+      return { id: parts[0].trim(), category: parts[1] || "剧集" };
+    }).filter(i => i.id);
   }
 
-  async fetchTMDB(endpoint) {
-    return new Promise((resolve) => {
+  async fetch(endpoint) {
+    return new Promise(resolve => {
       const url = `https://api.themoviedb.org/3/${endpoint}?language=zh-CN`;
-      $httpClient.get(
-        {
-          url,
-          timeout: 5000,
-          headers: {
-            Authorization: `Bearer ${this.token}`,
-            Accept: "application/json"
-          }
+      $httpClient.get({
+        url,
+        headers: { 
+          "Authorization": `Bearer ${this.token}`,
+          "Accept": "application/json"
         },
-        (err, resp, body) => {
-          if (err || !body || resp.status !== 200) resolve(null);
-          else resolve(JSON.parse(body));
+        timeout: 10000
+      }, (err, resp, body) => {
+        if (err || !body || (resp && resp.status !== 200)) {
+          console.log(`Fetch Error: ${endpoint} - ${err || 'Status:' + resp.status}`);
+          resolve(null);
+        } else {
+          try { resolve(JSON.parse(body)); } catch(e) { resolve(null); }
         }
-      );
+      });
     });
   }
 
   async run() {
-    // 安全检查
-    if (!this.token || this.token.length < 20) {
-      this.finish("❌ 请检查 TMDB_TOKEN 配置");
-      return;
+    // 1. 检查 Token
+    if (!this.token || this.token.length < 50) {
+      return this.finish("❌ 请在模块配置中填写正确的 TMDB_TOKEN");
     }
 
+    // 2. 检查列表
     const shows = this.parseShows();
     if (shows.length === 0) {
-      this.finish("⚠️ 剧集列表为空，请在面板配置");
-      return;
+      return this.finish("⚠️ 剧集列表为空，请检查 SHOWS_LIST 格式");
     }
 
     const todayUpdated = [];
     const future = [];
 
-    // 并行抓取
+    // 3. 执行并发请求
     const tasks = shows.map(async (meta) => {
-      const show = await this.fetchTMDB(`tv/${meta.id}`);
+      const show = await this.fetch(`tv/${meta.id}`);
       if (!show) return;
 
       const base = {
-        name: show.name || "未知剧集",
+        name: show.name,
         category: meta.category,
-        rating: show.vote_average ? show.vote_average.toFixed(1) : "0.0"
+        rating: (show.vote_average || 0).toFixed(1)
       };
 
-      // 今日更新逻辑
-      if (show.last_air_date === this.todayStr && show.last_episode_to_air) {
-        const e = show.last_episode_to_air;
-        todayUpdated.push({ ...base, s: e.season_number, e: e.episode_number });
+      // 检查今日更新
+      if (show.last_air_date === this.todayStr) {
+        todayUpdated.push(base);
       }
 
-      // 即将更新逻辑
+      // 检查即将更新
       if (show.next_episode_to_air) {
-        const e = show.next_episode_to_air;
-        const diff = Math.ceil((new Date(e.air_date) - new Date(this.todayStr)) / 86400000);
-        if (diff > 0 && diff <= this.upcomingDays) {
-          future.push({ ...base, s: e.season_number, e: e.episode_number, d: diff, ad: e.air_date });
+        const airDate = show.next_episode_to_air.air_date;
+        const diff = Math.ceil((new Date(airDate) - new Date(this.todayStr)) / 86400000);
+        if (diff > 0 && diff <= this.days) {
+          future.push({ ...base, diff, airDate, ...show.next_episode_to_air });
         }
       }
     });
 
     await Promise.all(tasks);
 
-    // 排序：按天数由近到远
-    future.sort((a, b) => a.d - b.d);
-
-    this.render(todayUpdated, future);
+    // 4. 渲染输出
+    this.render(todayUpdated, future.sort((a, b) => a.diff - b.diff));
   }
 
   render(today, upcoming) {
     let content = "";
-
     if (today.length > 0) {
-      content += "🎬 今日已更新\n";
-      today.forEach(i => content += `【${i.name}】S${i.s}E${i.e} ⭐${i.rating}\n`);
-      content += "\n";
+      content += "🎬 今日更新\n" + today.map(i => `【${i.name}】⭐${i.rating}`).join('\n') + "\n\n";
     }
-
     if (upcoming.length > 0) {
-      content += "📅 即将更新\n";
-      upcoming.forEach(i => {
-        const timeTag = i.d === 1 ? "明天" : `${i.d}天后`;
-        content += `【${i.name}】${timeTag} (S${i.s}E${i.e})\n`;
-      });
+      content += "📅 即将更新\n" + upcoming.map(i => {
+        const t = i.diff === 1 ? "明天" : `${i.diff}天后`;
+        return `【${i.name}】${t} (S${i.season_number}E${i.episode_number})`;
+      }).join('\n');
     }
 
     this.finish(content || "近期暂无剧集更新 😴");
@@ -115,16 +110,16 @@ class TMDBTracker {
 
   finish(content) {
     $done({
-      title: "📺 TMDB 追剧",
+      title: "📺 TMDB 追剧助手",
       content: content.trim(),
-      icon: "tv",
-      "icon-color": "#ff9500",
-      "update-time": new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
+      icon: "tv.fill",
+      "icon-color": "#00BBFF"
     });
   }
 }
 
-// 启动执行
+// 确保执行
 new TMDBTracker().run().catch(e => {
-  $done({ title: "脚本错误", content: e.message });
+  console.log(e);
+  $done({ title: "脚本崩溃", content: e.message });
 });
