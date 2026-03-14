@@ -1,19 +1,31 @@
+/**
+ * TMDB Tracker for Egern
+ */
 class TMDBTracker {
-  constructor(options = {}) {
-    this.token = options.TMDB_TOKEN;
-    this.upcomingDays = parseInt(options.UPCOMING_DAYS || 7);
-    this.shows = JSON.parse(options.SHOWS_JSON || "[]");
+  constructor() {
+    // 关键优化：从 Egern 环境读取变量
+    this.token = $env.TMDB_TOKEN || "";
+    this.days = parseInt($env.UPCOMING_DAYS || 7);
+    this.shows = this.parseShows($env.SHOWS_LIST);
     
-    this.onUpdate = options.onUpdate || (() => {});
+    this.todayStr = new Date().toISOString().slice(0, 10);
   }
 
-  // 模拟 Egern 的 httpGet 逻辑，兼容类写法
-  async fetchTMDB(endpoint) {
+  // 解析 "ID:分类" 这种易读格式
+  parseShows(str) {
+    if (!str) return [];
+    return str.split(',').map(item => {
+      const [id, cat] = item.trim().split(':');
+      return { id: id.trim(), category: cat || "剧集" };
+    });
+  }
+
+  async fetch(endpoint) {
     return new Promise(resolve => {
       const url = `https://api.themoviedb.org/3/${endpoint}?language=zh-CN`;
       $httpClient.get({
         url,
-        headers: { Authorization: `Bearer ${this.token}`, Accept: "application/json" }
+        headers: { Authorization: `Bearer ${this.token}` }
       }, (err, resp, body) => {
         if (err || !body) resolve(null);
         else resolve(JSON.parse(body));
@@ -21,72 +33,60 @@ class TMDBTracker {
     });
   }
 
-  async start() {
-    const todayStr = new Date().toISOString().slice(0, 10);
+  async run() {
+    if (!this.token) {
+      this.finish("⚠️ 请先配置 TMDB_TOKEN");
+      return;
+    }
+
     const todayUpdated = [];
     const future = [];
 
-    // 并行抓取所有剧集数据
     const tasks = this.shows.map(async (meta) => {
-      const show = await this.fetchTMDB(`tv/${meta.id}`);
+      const show = await this.fetch(`tv/${meta.id}`);
       if (!show) return;
 
-      const base = {
-        name: show.name || meta.name,
-        category: meta.category,
-        rating: show.vote_average ? show.vote_average.toFixed(1) : "0.0",
-        popularity: Math.round(show.popularity || 0)
-      };
+      const base = { name: show.name, category: meta.category, rating: show.vote_average.toFixed(1) };
 
-      // 判断今日更新
-      if (show.last_air_date === todayStr && show.last_episode_to_air) {
-        const e = show.last_episode_to_air;
-        todayUpdated.push({ ...base, s: e.season_number, e: e.episode_number });
+      // 今日更新判断
+      if (show.last_air_date === this.todayStr) {
+        todayUpdated.push({ ...base, ...show.last_episode_to_air });
       }
-
-      // 判断即将更新
+      // 即将更新判断
       if (show.next_episode_to_air) {
-        const e = show.next_episode_to_air;
-        const diff = Math.ceil((new Date(e.air_date) - new Date(todayStr)) / 86400000);
-        if (diff > 0 && diff <= this.upcomingDays) {
-          future.push({ ...base, s: e.season_number, e: e.episode_number, d: diff, ad: e.air_date });
+        const airDate = show.next_episode_to_air.air_date;
+        const diff = Math.ceil((new Date(airDate) - new Date(this.todayStr)) / 86400000);
+        if (diff > 0 && diff <= this.days) {
+          future.push({ ...base, ...show.next_episode_to_air, diff });
         }
       }
     });
 
     await Promise.all(tasks);
-    future.sort((a, b) => a.d - b.d);
-
-    // 格式化输出内容
-    const content = this.formatContent(todayUpdated, future);
-    
-    // 最终调用 Egern 的 $done
-    $done({
-      title: "📺 TMDB 追剧",
-      content: content,
-      icon: "tv",
-      "icon-color": "#ff9500"
-    });
+    this.render(todayUpdated, future.sort((a, b) => a.diff - b.diff));
   }
 
-  formatContent(todayUpdated, future) {
-    let lines = [];
-    if (todayUpdated.length) {
-      lines.push("🎬 今日已更新");
-      todayUpdated.forEach(i => lines.push(`【${i.name}】S${i.s}E${i.e} ⭐${i.rating}`));
-      lines.push("");
+  render(today, future) {
+    let content = "";
+    if (today.length) {
+      content += "🎬 今日更新\n" + today.map(i => `【${i.name}】S${i.season_number}E${i.episode_number}`).join('\n') + "\n\n";
     }
     if (future.length) {
-      lines.push("📅 即将更新");
-      future.forEach(i => {
-        const t = i.d === 1 ? "明天" : `${i.d}天后`;
-        lines.push(`【${i.name}】${t} (S${i.s}E${i.e})`);
-      });
+      content += "📅 即将更新\n" + future.map(i => `【${i.name}】${i.diff}天后 (S${i.season_number}E${i.episode_number})`).join('\n');
     }
-    return lines.length ? lines.join("\n") : "近期暂无更新 😴";
+    this.finish(content || "近期无更新 😴");
+  }
+
+  finish(content) {
+    $done({
+      title: "📺 TMDB 追剧",
+      content: content.trim(),
+      icon: "tv",
+      "icon-color": "#ff9500",
+      "update-time": new Date().toLocaleTimeString()
+    });
   }
 }
 
-// 自动执行
-const tracker = new TMDBTracker($argument || {}); // $argument 获取 YAML 中的 env_schema
-tracker.start();
+// 立即实例化并运行
+new TMDBTracker().run().catch(e => $done({ title: "错误", content: e.message }));
