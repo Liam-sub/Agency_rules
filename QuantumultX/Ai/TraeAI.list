@@ -1,13 +1,47 @@
+# ============================================================
+# Trae's Ai (No DIRECT)
+# Author：Liam Chen
+# Create Time：2026-03-31 15:43
+# ============================================================
 
+
+# ===== Trae (Bytedance AI Overseas) =====
+
+# --- 核心 ---
+DOMAIN-SUFFIX,trae.ai,trae
+DOMAIN-SUFFIX,trae.com,trae
+
+# --- 字节海外 ---
+DOMAIN-SUFFIX,byteoversea.com,trae
+DOMAIN-SUFFIX,byteintlapi.com,trae
+DOMAIN-SUFFIX,byteintl.com,trae
+DOMAIN-SUFFIX,bytedance.com,trae
+DOMAIN-SUFFIX,bytedance.net,trae
+
+# --- API ---
+DOMAIN-SUFFIX,ibytedtos.com,trae
+DOMAIN-SUFFIX,sgsnssdk.com,trae
+DOMAIN-SUFFIX,ttapis.com,trae
+
+# --- CDN ---
+DOMAIN-SUFFIX,byteimg.com,trae
+DOMAIN-SUFFIX,bytedcdn.com,trae
+DOMAIN-SUFFIX,muscdn.com,trae
+
+# --- 登录 ---
+DOMAIN-SUFFIX,tiktok.com,trae
+DOMAIN-SUFFIX,tiktokv.com,trae
+DOMAIN-SUFFIX,tiktokcdn.com,trae
 
 
 # ---- trae Ai ----
-DOMAIN-SUFFIX,trae.ai,AI Platforms
-DOMAIN-SUFFIX,traecdn.ai,AI Platforms
-DOMAIN-KEYWORD,traeapi,AI Platforms
-DOMAIN-SUFFIX,mchost.guru,AI Platforms
-DOMAIN-SUFFIX,byteintlapi.com,AI Platforms
-DOMAIN-SUFFIX,dns-finder.com,AI Platforms
+DOMAIN-SUFFIX,trae.ai,trae
+DOMAIN-SUFFIX,traecdn.ai,trae
+DOMAIN-KEYWORD,traeapi,trae
+DOMAIN-SUFFIX,mchost.guru,trae
+DOMAIN-SUFFIX,byteintlapi.com,trae
+DOMAIN-SUFFIX,dns-finder.com,trae
 
-IP-ASN,20940,AI Platforms
+IP-ASN,20940,trae
+
 
