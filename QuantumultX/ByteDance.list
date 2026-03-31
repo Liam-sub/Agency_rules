@@ -1,0 +1,73 @@
+# ==============================
+# author:Liam
+# update time:2026-01-20
+# ==============================
+
+# ===== ByteDance Core =====
+DOMAIN-SUFFIX,bytedance.com,ByteDance
+DOMAIN-SUFFIX,bytecdn.cn,ByteDance
+DOMAIN-SUFFIX,bytecdn.com,ByteDance
+DOMAIN-SUFFIX,bytedns.net,ByteDance
+DOMAIN-SUFFIX,byted.org,ByteDance
+DOMAIN-SUFFIX,byteacctimg.com,ByteDance
+DOMAIN-SUFFIX,byteactivity.com,ByteDance
+DOMAIN-SUFFIX,bytednsdoc.com,ByteDance
+DOMAIN-SUFFIX,byteeffecttos.com,ByteDance
+DOMAIN-SUFFIX,bytegecko.com,ByteDance
+DOMAIN-SUFFIX,bytegoofy.com,ByteDance
+DOMAIN-SUFFIX,bytemastatic.com,ByteDance
+DOMAIN-SUFFIX,bytescm.com,ByteDance
+DOMAIN-SUFFIX,bytetos.com,ByteDance
+DOMAIN-SUFFIX,zijieapi.com,ByteDance
+
+# ===== Douyin / Toutiao / Xigua =====
+DOMAIN-SUFFIX,douyincdn.com,ByteDance
+DOMAIN-SUFFIX,douyin.com,ByteDance
+DOMAIN-SUFFIX,douyinpic.com,ByteDance
+DOMAIN-SUFFIX,douyinvod.com,ByteDance
+DOMAIN-SUFFIX,douyinstatic.com,ByteDance
+DOMAIN-SUFFIX,idouyinvod.com,ByteDance
+DOMAIN-SUFFIX,amemv.com,ByteDance
+DOMAIN-SUFFIX,awemeughun.com,ByteDance
+DOMAIN-SUFFIX,ecombdapi.com,ByteDance
+DOMAIN-SUFFIX,ecombdimg.com,ByteDance
+DOMAIN-SUFFIX,ecombdstatic.com,ByteDance
+DOMAIN-SUFFIX,toutiao.com,ByteDance
+DOMAIN-SUFFIX,snssdk.com,ByteDance
+DOMAIN-SUFFIX,ixigua.com,ByteDance
+DOMAIN-SUFFIX,xiguavideo.com,ByteDance
+
+# ===== ByteDance CDN =====
+DOMAIN-SUFFIX,byteimg.com,ByteDance
+DOMAIN-SUFFIX,bytecdn.cn,ByteDance
+DOMAIN-SUFFIX,bdstatic.com,ByteDance
+DOMAIN-SUFFIX,pstatp.com,ByteDance
+DOMAIN-SUFFIX,ibytedapm.com,ByteDance
+
+# ==== qishuimusic ====
+DOMAIN-SUFFIX,qishui.com.,ByteDance
+
+# ===== Feishu / Lark =====
+DOMAIN-SUFFIX,feishu.cn,ByteDance
+DOMAIN-SUFFIX,feishu.net,ByteDance
+DOMAIN-SUFFIX,larkoffice.com,ByteDance
+DOMAIN-SUFFIX,larksuite.com,ByteDance
+DOMAIN-SUFFIX,larkcloud.com,ByteDance
+
+# ===== Ocean Engine =====
+DOMAIN-SUFFIX,oceanengine.com,ByteDance
+DOMAIN-SUFFIX,ad.oceanengine.com,ByteDance
+DOMAIN-SUFFIX,volcengine.com,ByteDance
+
+# ===== Volcano Engine =====
+DOMAIN-SUFFIX,volcengine.com,ByteDance
+DOMAIN-SUFFIX,byteplus.com,ByteDance
+DOMAIN-SUFFIX,bytepluscdn.com,ByteDance
+
+# ===== other =====
+DOMAIN-SUFFIX,pstatp.com,ByteDance
+DOMAIN-SUFFIX,snssdk.com,ByteDance
+DOMAIN-SUFFIX,umeng.com,ByteDance
+DOMAIN-SUFFIX,xycdn.com,ByteDance
+DOMAIN-SUFFIX,zijieapi.com,ByteDance
+DOMAIN-SUFFIX,zjcdn.com,ByteDance
