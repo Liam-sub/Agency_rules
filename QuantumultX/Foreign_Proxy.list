@@ -8,6 +8,7 @@
 DOMAIN-SUFFIX,unpkg.com,Foreign_Proxy
 DOMAIN-SUFFIX,tigress.cc,Foreign_Proxy
 DOMAIN-KEYWORD,meituge,Foreign_Proxy             # 美图阁
+DOMAIN-KEYWORD,itbzzb,Foreign_Proxy              #codex三方token订阅
 
 # --- cursor ---
 DOMAIN-KEYWORD,cursor,Foreign_Proxy              # cursor
@@ -105,6 +106,7 @@ DOMAIN-SUFFIX,bitbucket.org,Foreign_Proxy
 DOMAIN-SUFFIX,githubcopilot.com,Foreign_Proxy
 DOMAIN-SUFFIX,githubassets.com,Foreign_Proxy
 DOMAIN-SUFFIX,github.io,Foreign_Proxy
+DOMAIN-KEYWORD,github,Foreign_Proxy
 
 # --- Stack Overflow / 技术社区 ---
 DOMAIN-SUFFIX,stackoverflow.com,Foreign_Proxy
