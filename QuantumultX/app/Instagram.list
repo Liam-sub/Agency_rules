@@ -1,0 +1,25 @@
+# ============================================================
+# Instagram app
+# Author：Liam Chen
+# Create Time：2026-03-31 15:52
+# ============================================================
+
+
+# Meta
+DOMAIN-SUFFIX,instagram.com,Proxy
+DOMAIN-SUFFIX,cdninstagram.com,Proxy
+
+DOMAIN-SUFFIX,facebook.com,Proxy
+DOMAIN-SUFFIX,fbcdn.net,Proxy
+DOMAIN-SUFFIX,facebook.net,Proxy
+DOMAIN-SUFFIX,fbsbx.com,Proxy
+DOMAIN-SUFFIX,fbapi.com,Proxy
+DOMAIN-SUFFIX,graph.facebook.com,Proxy
+
+DOMAIN-SUFFIX,messenger.com,Proxy
+DOMAIN-SUFFIX,accountscenter.facebook.com,Proxy
+DOMAIN-SUFFIX,connect.facebook.net,Proxy
+
+DOMAIN-SUFFIX,whatsapp.com,Proxy
+DOMAIN-SUFFIX,whatsapp.net,Proxy
+DOMAIN-SUFFIX,meta.com,Proxy
