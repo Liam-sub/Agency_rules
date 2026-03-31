@@ -1,0 +1,73 @@
+# ==================================
+# author:Liam
+# update time:2026-01-20
+# ==================================
+
+# ===== Tencent Core =====
+DOMAIN-SUFFIX,tencent.com,Tencent
+DOMAIN-SUFFIX,qq.com,Tencent
+DOMAIN-SUFFIX,weixin.qq.com,Tencent
+DOMAIN-SUFFIX,wechat.com,Tencent
+DOMAIN-SUFFIX,qpic.cn,Tencent
+DOMAIN-SUFFIX,gtimg.com,Tencent
+
+# ===== WeChat =====
+DOMAIN-SUFFIX,weixin.qq.com,Tencent
+DOMAIN-SUFFIX,wx.qq.com,Tencent
+DOMAIN-SUFFIX,servicewechat.com,Tencent
+DOMAIN-SUFFIX,tenpay.com,Tencent
+DOMAIN-SUFFIX,wxpay.qq.com,Tencent
+DOMAIN-SUFFIX,wechatpay.cn,Tencent
+DOMAIN-SUFFIX,qq.com.cn,Tencent
+DOMAIN-KEYWORD,wxqcloud,Tencent
+
+# ===== QQ & Work WeChat =====
+DOMAIN-SUFFIX,qq.com,Tencent
+DOMAIN-SUFFIX,tim.qq.com,Tencent
+DOMAIN-SUFFIX,wework.com,Tencent
+DOMAIN-SUFFIX,work.weixin.qq.com,Tencent
+
+# ===== Tencent Media =====
+DOMAIN-SUFFIX,v.qq.com,Tencent
+DOMAIN-SUFFIX,video.qq.com,Tencent
+DOMAIN-SUFFIX,qqmusic.qq.com,Tencent
+DOMAIN-SUFFIX,y.qq.com,Tencent
+DOMAIN-SUFFIX,kugou.com,Tencent
+DOMAIN-SUFFIX,kuwo.cn,Tencent
+DOMAIN-SUFFIX,weread.qq.com,Tencent
+
+# ===== Tencent Games =====
+DOMAIN-SUFFIX,game.qq.com,Tencent
+DOMAIN-SUFFIX,ieg.com,Tencent
+DOMAIN-SUFFIX,qqgame.qq.com,Tencent
+DOMAIN-SUFFIX,tencentgames.com,Tencent
+DOMAIN-SUFFIX,gcloud.qq.com,Tencent
+
+# ===== Tencent Cloud =====
+DOMAIN-SUFFIX,qcloud.com,Tencent
+DOMAIN-SUFFIX,myqcloud.com,Tencent
+DOMAIN-SUFFIX,tcloudbase.com,Tencent
+DOMAIN-SUFFIX,tencent-cloud.com,Tencent
+
+# ===== Tencent Infra =====
+DOMAIN-SUFFIX,umeng.com,Tencent
+DOMAIN-SUFFIX,bugly.qq.com,Tencent
+DOMAIN-SUFFIX,mta.qq.com,Tencent
+DOMAIN-SUFFIX,beacon.qq.com,Tencent
+
+# ===== Tencent CDN =====
+DOMAIN-SUFFIX,gtimg.com,Tencent
+DOMAIN-SUFFIX,qpic.cn,Tencent
+DOMAIN-SUFFIX,cdn.qq.com,Tencent
+DOMAIN-SUFFIX,tc.qq.com,Tencent
+
+# ===== Tencent ALL Tencent =====
+DOMAIN-SUFFIX,qq.com,Tencent
+DOMAIN-SUFFIX,tencent.com,Tencent
+DOMAIN-SUFFIX,weixin.qq.com,Tencent
+DOMAIN-SUFFIX,wechat.com,Tencent
+DOMAIN-SUFFIX,gtimg.com,Tencent
+DOMAIN-SUFFIX,qpic.cn,Tencent
+DOMAIN-SUFFIX,qcloud.com,Tencent
+DOMAIN-SUFFIX,myqcloud.com,Tencent
+DOMAIN-SUFFIX,tenpay.com,Tencent
