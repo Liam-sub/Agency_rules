@@ -46,6 +46,10 @@ DOMAIN-SUFFIX,fedexfreight.fedex.com,Work_Proxy
 DOMAIN-SUFFIX,ftn.fedex.com,Work_Proxy
 DOMAIN-SUFFIX,fedexground.com,Work_Proxy
 
+# --- xlmies ---
+DOMAIN-SUFFIX,myxmiles.com,Work_Proxy
+
+
 # --- DHL ---
 DOMAIN-SUFFIX,dhl.com,Work_Proxy
 
@@ -107,6 +111,9 @@ DOMAIN-SUFFIX,rlglobal.com,Work_Proxy
 DOMAIN-SUFFIX,landstar.com,Work_Proxy
 DOMAIN-SUFFIX,wardtlc.com,Work_Proxy
 DOMAIN-SUFFIX,cfidrive.com,Work_Proxy
+
+
+
 
 
 
