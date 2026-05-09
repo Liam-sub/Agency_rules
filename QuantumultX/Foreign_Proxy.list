@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,tigress.cc,Foreign_Proxy
 DOMAIN-KEYWORD,meituge,Foreign_Proxy             # 美图阁
 DOMAIN-KEYWORD,itbzzb,Foreign_Proxy              #codex三方token订阅
 DOMAIN-SUFFIX,jucode.cn,Foreign_Proxy            #codex三方token订阅
+DOMAIN-KEYWORD,linkapi,Foreign_Proxy             #codex三方token订阅
 
 # --- cursor ---
 DOMAIN-KEYWORD,cursor,Foreign_Proxy              # cursor
