@@ -1,0 +1,20 @@
+# ==================================
+# Remark:China Ai
+# Author:Liam
+# Update Time:2026-07-02 17:14:47
+# ==================================
+
+# ====== DeepSeek Ai =======
+DOMAIN-SUFFIX,deepseek.com,China_Direct
+
+# ====== 月之暗面/kimi ai =======
+
+DOMAIN-SUFFIX,moonshot.cn,China_Direct
+DOMAIN-SUFFIX,moonshot.com,China_Direct
+
+# ====== 智谱Ai =======
+DOMAIN-SUFFIX,bigmodel.cn,China_Direct
+
+
+# ====== 小米Mimo Ai ======
+DOMAIN-SUFFIX,xiaomimimo.com,China_Direct
