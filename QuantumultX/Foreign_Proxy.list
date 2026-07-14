@@ -11,7 +11,8 @@ DOMAIN-KEYWORD,meituge,Foreign_Proxy             # 美图阁
 DOMAIN-KEYWORD,itbzzb,Foreign_Proxy              # codex三方token订阅
 DOMAIN-SUFFIX,jucode.cn,Foreign_Proxy            # codex三方token订阅
 DOMAIN-KEYWORD,linkapi,Foreign_Proxy             # codex三方token订阅
-DOMAIN-SUFFIX,x.ai,Foreign_Proxy                # 推特ai
+
+DOMAIN- SUFFIX,vmiss.com,Foreign_Proxy           # VMISS服务器
 
 # --- cursor ---
 DOMAIN-KEYWORD,cursor,Foreign_Proxy              # cursor
