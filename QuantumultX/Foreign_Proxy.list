@@ -26,6 +26,10 @@ DOMAIN-SUFFIX,icons8.com,Foreign_Proxy
 #DOMAIN-KEYWORD,igoutu,Foreign_Proxy
 
 
+# --- ns论坛 ---
+DOMAIN-SUFFIX,nodeseek.com,Foreign_Proxy            
+
+
 
 # --- 去广告 ---
 DOMAIN-SUFFIX,limbopro.com,Foreign_Proxy
