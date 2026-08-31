@@ -1,4 +1,5 @@
 # --- 国内直连(工作系统) ---
 DOMAIN-KEYWORD, stage-, Work_Direct
 DOMAIN-KEYWORD, ehengjian, Work_Direct
-DOMAIN-SUFFIX, acc-wms.thecopeservices.com, Work_Direct             #WMS生产环境
+DOMAIN-SUFFIX, acc-wms.thecopeservices.com, Work_Direct             # WMS生产环境
+IP- CIDR, 101.35.245.232, Work_Direct    # 宝塔IP
