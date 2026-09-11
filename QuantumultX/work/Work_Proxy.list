@@ -14,7 +14,7 @@ DOMAIN,uc.thecopeservices.com,Work_Proxy
 DOMAIN,ucenter.thecopeservices.com,Work_Proxy
 DOMAIN,bi.thecopeservices.com,Work_Proxy
 DOMAIN,ship.thecopeservices.com,Work_Proxy
-
+DOMAIN_SUFFIX,thecopeservices.com,Work_Proxy
 
 # --- 卡车系统 ---
 DOMAIN-SUFFIX,hyperlining.com,Work_Proxy
