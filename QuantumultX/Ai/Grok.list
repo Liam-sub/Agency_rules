@@ -7,3 +7,6 @@
 DOMAIN-SUFFIX,x.ai,GROK
 DOMAIN-SUFFIX,grok.com,GROK
 DOMAIN-KEYWORD,grok,GROK
+
+# --- cursor ---
+DOMAIN-KEYWORD,cursor,Foreign_Proxy              # cursor
