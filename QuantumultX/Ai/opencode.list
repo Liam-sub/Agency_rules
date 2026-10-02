@@ -1,0 +1,14 @@
+# ========= OpenCode =========
+
+# OpenCode official
+DOMAIN-SUFFIX,opencode.ai,opencode
+DOMAIN,api.opencode.ai,opencode
+
+# Models.dev
+DOMAIN-SUFFIX,models.dev,opencode
+
+# GitHub - if not already handled globally
+DOMAIN-SUFFIX,github.com,opencode
+DOMAIN-SUFFIX,githubusercontent.com,opencode
+
+
