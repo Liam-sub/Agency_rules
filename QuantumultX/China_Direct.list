@@ -11,10 +11,10 @@ DOMAIN-SUFFIX, axmax.cn, China_Direct
 DOMAIN-SUFFIX, aijuli.com, China_Direct                 #Ai零距离
 DOMAIN-SUFFIX, macwk.cn, China_Direct                   #Mac软件下载
 DOMAIN-SUFFIX, tapd.cn, China_Direct
-DOMAIN-SUFFIX,immersivetranslate.cn,China_Direct        #沉浸式翻译插件
+DOMAIN-SUFFIX, immersivetranslate.cn, China_Direct        #沉浸式翻译插件
 
 
-# --- 无名小站（电影下载） ---
+# ---- 无名小站/观影（电影下载） ----
 DOMAIN-KEYWORD, gying, China_Direct
 DOMAIN-SUFFIX, gying.page, China_Direct
 DOMAIN-SUFFIX, gying.org, China_Direct
@@ -33,7 +33,6 @@ DOMAIN-SUFFIX,tencent.com,China_Direct
 DOMAIN-SUFFIX,ixigua.com,China_Direct
 DOMAIN-SUFFIX,huoshan.com,China_Direct
 
-
 # 已单独走分流规则
 # DOMAIN-SUFFIX,xiaohongshu.com,China_Direct
 # DOMAIN-SUFFIX,xiaohongshu.net,China_Direct
@@ -42,6 +41,7 @@ DOMAIN-SUFFIX,weibo.com,China_Direct
 DOMAIN-SUFFIX,weibo.cn,China_Direct
 DOMAIN-SUFFIX,sina.com.cn,China_Direct
 DOMAIN-SUFFIX,sina.cn,China_Direct
+DOMAIN-KEYWORD,sina,China_Direct
 
 DOMAIN-SUFFIX,zhihu.com,China_Direct
 
@@ -189,6 +189,8 @@ DOMAIN-SUFFIX,sto.cn,China_Direct
 
 DOMAIN-SUFFIX,fcbox.com,China_Direct
 
+# ---- 餐饮 ----
+DOMAIN-KEYWORD,lkcoffee,China_Direct                    #瑞幸咖啡
 
 # ---- 美团 ----
 DOMAIN-SUFFIX,meituan.com,China_Direct
@@ -267,6 +269,7 @@ DOMAIN-SUFFIX,baidu.com,China_Direct
 DOMAIN-SUFFIX,baiducontent.com,China_Direct
 DOMAIN-SUFFIX,baidupcs.com,China_Direct
 DOMAIN-SUFFIX,bdstatic.com,China_Direct
+DOMAIN-KEYWORD,baidu,China_Direct
 
 DOMAIN-SUFFIX,360.cn,China_Direct
 DOMAIN-SUFFIX,so.com,China_Direct
@@ -307,6 +310,7 @@ DOMAIN-SUFFIX,oppo.com,China_Direct
 DOMAIN-SUFFIX,oneplus.com,China_Direct
 DOMAIN-SUFFIX,vivo.com,China_Direct
 DOMAIN-SUFFIX,realme.com,China_Direct
+DOMAIN-KEYWORD,xiaomi,China_Direct
 
 DOMAIN-SUFFIX,samsung.com,China_Direct
 
@@ -384,8 +388,7 @@ DOMAIN-SUFFIX,douyucdn.cn,China_Direct
 DOMAIN-SUFFIX,douyutv.com,China_Direct
 DOMAIN-SUFFIX,douyuscdn.com,China_Direct
 
-# ===== B站 =====
-# Bilibili
+# ===== B站/Bilibili =====
 DOMAIN-SUFFIX,bilibili.com,China_Direct
 DOMAIN-SUFFIX,bilibili.cn,China_Direct
 DOMAIN-SUFFIX,bilibili.tv,China_Direct
