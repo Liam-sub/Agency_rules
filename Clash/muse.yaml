@@ -1,0 +1,7 @@
+# muse ai分流
+
+payload:
+  - DOMAIN-SUFFIX, meta.com
+  - DOMAIN-SUFFIX, museai.im
+  - DOMAIN-KEYWORD, museai
+  - DOMAIN-KEYWORD, muse
