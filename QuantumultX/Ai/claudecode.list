@@ -30,6 +30,6 @@ DOMAIN-SUFFIX,intercomcdn.com,claude
 DOMAIN,cdn.usefathom.com,claude
 
 # IP 段 / ASN 兜底
-IP-CIDR,160.79.104.0/21,no-resolve,claude
-IP-CIDR6,2607:6bc0::/32,no-resolve,claude
-IP-ASN,399358,no-resolve,claude
+IP-CIDR,160.79.104.0/21,claude,no-resolve
+IP-CIDR6,2607:6bc0::/32,claude,no-resolve
+IP-ASN,399358,claude,no-resolve
