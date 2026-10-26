@@ -1,0 +1,35 @@
+
+
+# 核心域名（DOMAIN-SUFFIX 已覆盖所有 *.anthropic.com 子域名）
+DOMAIN-SUFFIX,anthropic.com,claude
+DOMAIN-SUFFIX,claude.ai,claude
+DOMAIN-SUFFIX,claude.com,claude
+DOMAIN-SUFFIX,clau.de,claude
+DOMAIN-SUFFIX,claudemcpclient.com,claude
+DOMAIN-SUFFIX,claudemcpcontent.com,claude
+DOMAIN-SUFFIX,claudeusercontent.com,claude
+
+# CDN 和静态资源
+DOMAIN,servd-anthropic-website.b-cdn.net,claude
+DOMAIN,anthropic.com.cdn.cloudflare.net,claude
+
+# 认证 / 内容
+DOMAIN,anthropic.auth0.com,claude
+DOMAIN,anthropic-com.ghost.io,claude
+
+# 监控和遥测
+DOMAIN-SUFFIX,sentry.io,claude
+DOMAIN-SUFFIX,statsigapi.net,claude
+DOMAIN,browser-intake-us5-datadoghq.com,claude
+DOMAIN-KEYWORD,datadog,claude
+DOMAIN-KEYWORD,sift,claude
+
+# 客服 / 第三方 widget
+DOMAIN-SUFFIX,intercom.io,claude
+DOMAIN-SUFFIX,intercomcdn.com,claude
+DOMAIN,cdn.usefathom.com,claude
+
+# IP 段 / ASN 兜底
+IP-CIDR,160.79.104.0/21,no-resolve,claude
+IP-CIDR6,2607:6bc0::/32,no-resolve,claude
+IP-ASN,399358,no-resolve,claude
