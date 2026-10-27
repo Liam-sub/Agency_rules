@@ -1,0 +1,503 @@
+
+mode: rule
+ipv6: true
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - 'localhost'
+    - 'localhost.ptlogin2.qq.com'
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - 'time.*.com'
+    - 'ntp.*.com'
+
+  # 基础 DNS：使用 IP 地址，避免引导解析依赖 DoH 域名
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+  # 主 DNS：先使用可直接访问的国内 UDP DNS，避免 Cloudflare DoH 超时
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+  # 代理节点域名解析
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+  # DIRECT 出站域名解析
+  direct-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+  direct-nameserver-follow-policy: false
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "♻️ 自动选择"
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    include-all-proxies: true
+  - name: "🛑 广告拦截"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+  - name: "🇨🇳 国内直连"
+    type: select
+    proxies:
+      - DIRECT
+      - "🚀 节点选择"
+  - name: "🍎 苹果"
+    type: select
+    proxies:
+      - DIRECT
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+  - name: "📺 YouTube"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "📲 Telegram"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "🔍 Google"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "Ⓜ️ Microsoft"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - DIRECT
+      - "♻️ 自动选择"
+  - name: "🌍 海外社交"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "🎬 海外流媒体"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "🏢 海外其他大厂"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "🤖 AI 服务"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "🌊 海外Asn"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
+  - name: "🐟 兜底"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - DIRECT
+
+rule-providers:
+  # --- 国内直连 ---
+  China:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml"
+    path: ./ruleset/China.yaml
+    interval: 86400
+  ChinaIPs:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
+    path: ./ruleset/ChinaIPs.yaml
+    interval: 86400
+  DingTalk:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DingTalk/DingTalk.yaml"
+    path: ./ruleset/DingTalk.yaml
+    interval: 86400
+  WeChat:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml"
+    path: ./ruleset/WeChat.yaml
+    interval: 86400
+  DouYin:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DouYin/DouYin.yaml"
+    path: ./ruleset/DouYin.yaml
+    interval: 86400
+  Tencent:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent.yaml"
+    path: ./ruleset/Tencent.yaml
+    interval: 86400
+  YouKu:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Youku/Youku.yaml"
+    path: ./ruleset/YouKu.yaml
+    interval: 86400
+  BaiDu:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Baidu/Baidu.yaml"
+    path: ./ruleset/BaiDu.yaml
+    interval: 86400
+  Direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml"
+    path: ./ruleset/Direct.yaml
+    interval: 86400
+  JingDong:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/JingDong/JingDong.yaml"
+    path: ./ruleset/JingDong.yaml
+    interval: 86400
+  Sina:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Sina/Sina.yaml"
+    path: ./ruleset/Sina.yaml
+    interval: 86400
+
+  iQIYI:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/iQIYI/iQIYI.yaml"
+    path: ./ruleset/iQIYI.yaml
+    interval: 86400
+  Alibaba:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba.yaml"
+    path: ./ruleset/Alibaba.yaml
+    interval: 86400
+  BiliBili:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    path: ./ruleset/BiliBili.yaml
+    interval: 86400
+  # --- 去广告（三个库互补：中文广告域名 / 国际广告域名 / 运营商劫持）---
+  Advertising:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising.yaml"
+    path: ./ruleset/Advertising.yaml
+    interval: 86400
+  adblockmihomo:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomo.mrs
+    path: ./ruleset/adblockmihomo.mrs
+    interval: 86400
+  # 更保守的替代（5,581 条，误伤更少）：把上面的 url 换成
+  #   .../adblockfilters@main/rules/adblockmihomolite.mrs
+  #   path 同步改成 ./ruleset/adblockmihomolite.mrs
+  Hijacking:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Hijacking/Hijacking.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+
+  # --- 代理类 ---
+  YouTube:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    path: ./ruleset/Google.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+  Instagram:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml"
+    path: ./ruleset/Instagram.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml"
+    path: ./ruleset/TikTok.yaml
+    interval: 86400
+  Twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./ruleset/Twitter.yaml
+    interval: 86400
+  Facebook:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml"
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml"
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+  Amazon:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Amazon/Amazon.yaml"
+    path: ./ruleset/Amazon.yaml
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    path: ./ruleset/GitHub.yaml
+    interval: 86400
+  Muse:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "hhttps://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Muse.yaml"
+    path: ./ruleset/Muse.yaml
+    interval: 86400
+  OpenAI:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/OpenAI.yaml
+    interval: 86400
+  Gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml"
+    path: ./ruleset/Gemini.yaml
+    interval: 86400
+  Claude:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/claudecode.yaml"
+    path: ./ruleset/Claude.yaml
+    interval: 86400
+  BardAI:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml"
+    path: ./ruleset/BardAI.yaml
+    interval: 86400
+
+  Spotify:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./ruleset/Spotify.yaml
+    interval: 86400
+  PrimeVideo:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PrimeVideo/PrimeVideo.yaml"
+    path: ./ruleset/PrimeVideo.yaml
+    interval: 86400
+  # --- 手动代理清单 ---
+  Proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml"
+    path: ./ruleset/Proxy.yaml
+    interval: 86400
+  # --- 美国 ---
+  Asn_Overseas:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Asn_Overseas.yaml"
+    path: ./ruleset/Asn_Overseas.yaml
+    interval: 86400
+  # --- 兜底 ---
+  Global:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml"
+    path: ./ruleset/Global.yaml
+    interval: 86400
+
+rules:
+  # ---- 去广告白名单：误伤的域名写在这两行之间，必须位于广告规则之前 ----
+  # - DOMAIN-SUFFIX,example.com,DIRECT
+  # ---- 广告拦截：域名大库 → 补充库(keyword+IP) → 运营商劫持 ----
+  - RULE-SET,adblockmihomo,🛑 广告拦截
+  - RULE-SET,Advertising,🛑 广告拦截
+  - RULE-SET,Hijacking,🛑 广告拦截
+  # ---- 0. 局域网 / 保留地址 ----
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
+  - IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  # ---- 1. 国内直连 ----
+  - RULE-SET,WeChat,🇨🇳 国内直连
+  - RULE-SET,Sina,🇨🇳 国内直连
+  - RULE-SET,China,🇨🇳 国内直连
+  - RULE-SET,ChinaIPs,🇨🇳 国内直连
+  - RULE-SET,DingTalk,🇨🇳 国内直连
+  - RULE-SET,DouYin,🇨🇳 国内直连
+  - RULE-SET,JingDong,🇨🇳 国内直连
+  - RULE-SET,Tencent,🇨🇳 国内直连
+  - RULE-SET,YouKu,🇨🇳 国内直连
+  - RULE-SET,BaiDu,🇨🇳 国内直连
+  - RULE-SET,Direct,🇨🇳 国内直连
+  - RULE-SET,iQIYI,🇨🇳 国内直连
+  - RULE-SET,Alibaba,🇨🇳 国内直连
+  - RULE-SET,BiliBili,🇨🇳 国内直连
+  # ---- 2. Apple ----
+  - RULE-SET,Apple,🍎 苹果
+  # ---- 3. YouTube(必须早于 Google) ----
+  - RULE-SET,YouTube,📺 YouTube
+  # ---- 4. Telegram ----
+  - RULE-SET,Telegram,📲 Telegram
+  # ---- 5. Google ----
+  - RULE-SET,Google,🔍 Google
+  # ---- 6. Microsoft ----
+  - RULE-SET,Microsoft,Ⓜ️ Microsoft
+  # ---- 7. 海外社交 ----
+  - RULE-SET,Instagram,🌍 海外社交
+  - RULE-SET,TikTok,🌍 海外社交
+  - RULE-SET,Twitter,🌍 海外社交
+  - RULE-SET,Facebook,🌍 海外社交
+  # ---- 8. 海外流媒体 ----
+  - RULE-SET,Netflix,🎬 海外流媒体
+  - RULE-SET,Spotify,🎬 海外流媒体
+  - RULE-SET,PrimeVideo,🎬 海外流媒体
+  # ---- 9. 海外其他大厂 ----
+  - RULE-SET,Amazon,🏢 海外其他大厂
+  - RULE-SET,GitHub,🏢 海外其他大厂
+  # ---- 10. AI 服务 ----
+  - RULE-SET,Muse,🤖 AI 服务
+  - RULE-SET,OpenAI,🤖 AI 服务
+  - RULE-SET,Gemini,🤖 AI 服务
+  - RULE-SET,Claude,🤖 AI 服务
+  - RULE-SET,BardAI,🤖 AI 服务
+  # ---- 11. Asn_海外 ----
+  - RULE-SET,Asn_Overseas,🌊 海外Asn
+  # ---- 手动代理清单 ----
+  - RULE-SET,Proxy,🚀 节点选择
+  # ---- 12. 兜底 ----
+  - GEOIP,CN,🇨🇳 国内直连
+  - RULE-SET,Global,🐟 兜底
+  - MATCH,🐟 兜底
+
