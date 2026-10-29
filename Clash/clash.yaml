@@ -154,13 +154,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml"
     path: ./ruleset/China.yaml
     interval: 86400
-  ChinaIPs:
-    type: http
-    behavior: ipcidr
-    format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
-    path: ./ruleset/ChinaIPs.yaml
-    interval: 86400
+  #ChinaIPs:
+   #type: http
+    #behavior: ipcidr
+    #format: yaml
+    #url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
+    #path: ./ruleset/ChinaIPs.yaml
+    #interval: 86400
   DingTalk:
     type: http
     behavior: classical
@@ -453,7 +453,7 @@ rules:
   - RULE-SET,WeChat,🇨🇳 国内直连
   - RULE-SET,Sina,🇨🇳 国内直连
   - RULE-SET,China,🇨🇳 国内直连
-  - RULE-SET,ChinaIPs,🇨🇳 国内直连
+  # - RULE-SET,ChinaIPs,🇨🇳 国内直连
   - RULE-SET,DingTalk,🇨🇳 国内直连
   - RULE-SET,DouYin,🇨🇳 国内直连
   - RULE-SET,JingDong,🇨🇳 国内直连
