@@ -25,8 +25,13 @@ DOMAIN-SUFFIX,traxltl.tql.com,Work_Proxy
 DOMAIN-KEYWORD,rlcarriers,Work_Proxy
 
 # --- WMS系统 ---
+#pro
 DOMAIN-SUFFIX,pro-wms.thecopeservices.com,Work_Proxy
 DOMAIN-SUFFIX,pro-wms-api.thecopeservices.com,Work_Proxy
+#prod
+DOMAIN-SUFFIX,-wms.thecopeservices.com,Work_Proxy
+DOMAIN-SUFFIX,-wms-api.thecopeservices.com,Work_Proxy
+# 巨沃
 DOMAIN-SUFFIX,wms-cli.thecopeservices.com,Work_Proxy
 
 # --- 其他系统 ---
