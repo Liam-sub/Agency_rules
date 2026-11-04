@@ -142,8 +142,9 @@ proxy-groups:
     type: select
     include-all-proxies: true
     proxies:
-      - "🚀 节点选择"
       - DIRECT
+      - "🚀 节点选择"
+      
 
 rule-providers:
   # --- 国内直连 ---
