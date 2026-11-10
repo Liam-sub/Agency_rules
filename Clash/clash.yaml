@@ -57,13 +57,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     include-all-proxies: true
-  - name: "🛑 广告拦截"
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - "🚀 节点选择"
-      - "♻️ 自动选择"
   - name: "🇨🇳 国内直连"
     type: select
     proxies:
@@ -247,24 +240,6 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./ruleset/BiliBili.yaml
     interval: 86400
-  # --- 去广告（三个库互补：中文广告域名 / 国际广告域名 / 运营商劫持）---
-  Advertising:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising.yaml"
-    path: ./ruleset/Advertising.yaml
-    interval: 86400
-  adblockmihomo:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://cdn.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomo.mrs
-    path: ./ruleset/adblockmihomo.mrs
-    interval: 86400
-  # 更保守的替代（5,581 条，误伤更少）：把上面的 url 换成
-  #   .../adblockfilters@main/rules/adblockmihomolite.mrs
-  #   path 同步改成 ./ruleset/adblockmihomolite.mrs
   Hijacking:
     type: http
     behavior: classical
@@ -434,12 +409,6 @@ rule-providers:
     interval: 86400
 
 rules:
-  # ---- 去广告白名单：误伤的域名写在这两行之间，必须位于广告规则之前 ----
-  # - DOMAIN-SUFFIX,example.com,DIRECT
-  # ---- 广告拦截：域名大库 → 补充库(keyword+IP) → 运营商劫持 ----
-  - RULE-SET,adblockmihomo,🛑 广告拦截
-  - RULE-SET,Advertising,🛑 广告拦截
-  - RULE-SET,Hijacking,🛑 广告拦截
   # ---- 0. 局域网 / 保留地址 ----
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
