@@ -513,6 +513,15 @@ rules:
   - RULE-SET,Asn_Overseas,🌊 海外Asn
   # ---- 手动代理清单 ----
   - RULE-SET,Proxy,🚀 节点选择
+  # ---- 11.5 Meta / WhatsApp 直连 IP 段（不依赖 IP-ASN 库，保证语音/裸 IP 连接也走代理）----
+  - IP-CIDR,157.240.0.0/16,🌍 海外社交,no-resolve
+  - IP-CIDR,31.13.24.0/21,🌍 海外社交,no-resolve
+  - IP-CIDR,129.134.0.0/16,🌍 海外社交,no-resolve
+  - IP-CIDR,102.132.96.0/20,🌍 海外社交,no-resolve
+  - IP-CIDR,163.70.128.0/17,🌍 海外社交,no-resolve
+  - IP-CIDR,179.60.192.0/22,🌍 海外社交,no-resolve
+  - IP-CIDR,185.60.216.0/22,🌍 海外社交,no-resolve
+  - IP-CIDR,57.141.0.0/16,🌍 海外社交,no-resolve
   # ---- 12. 兜底 ----
   - GEOIP,CN,🇨🇳 国内直连
   - RULE-SET,Global,🐟 兜底
