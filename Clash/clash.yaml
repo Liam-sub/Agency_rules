@@ -1,9 +1,43 @@
+# ============================================================
+# FlClash 本地完整配置（节点 + 修复后的规则）
+# 节点来源：订阅 label "xx"  https://dmit-2.04051314.xyz:2096/liam-sub/8blqhfrbrhpzn7ml
+# 导入方式：FlClash → 配置 → 新建 → 类型「本地文件」→ 选本文件 → 启用
+# ⚠️ 必须先在 FlClash → 设置 → 覆写 里关掉「DNS 覆写」，否则下面 dns 段会被覆盖
+# ⚠️ 想用 WhatsApp 桌面版：再打开「虚拟网卡(TUN)」
+# ============================================================
 
 mode: rule
-ipv6: true
+log-level: info
+ipv6: false
 unified-delay: true
 tcp-concurrent: true
-find-process-mode: strict
+find-process-mode: always
+
+proxies:
+  - name: "星总-107th0f9e1|📊141.19GB|⏳259D"
+    type: trojan
+    server: dmit-2.04051314.xyz
+    port: 48276
+    password: l86jeuljpbmn3tjx
+    network: tcp
+    tls: true
+    alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    udp: true
+  - name: 临时
+    type: vless
+    server: vmiss.basic.05043096.xyz
+    port: 42537
+    uuid: 08c96541-2278-44f9-b5eb-0dc3297b813c
+    network: tcp
+    tls: true
+    alpn:
+      - h2
+      - http/1.1
+    client-fingerprint: chrome
+    udp: true
 
 dns:
   enable: true
@@ -44,6 +78,23 @@ dns:
 
   direct-nameserver-follow-policy: false
 
+# 嗅探：让纯 IP 连接也能还原出域名，从而命中域名规则（WhatsApp 大量走裸 IP）
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  force-dns-mapping: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: false
+    TLS:
+      ports: [443, 8443]
+      override-destination: false
+  skip-domain:
+    - 'Mijia Cloud'
+    - '+.push.apple.com'
+
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
@@ -83,13 +134,6 @@ proxy-groups:
       - "♻️ 自动选择"
       - DIRECT
   - name: "📲 Telegram"
-    type: select
-    include-all-proxies: true
-    proxies:
-      - "🚀 节点选择"
-      - "♻️ 自动选择"
-      - DIRECT
-  - name: "🫧 Whatsapp"
     type: select
     include-all-proxies: true
     proxies:
@@ -149,8 +193,9 @@ proxy-groups:
     type: select
     include-all-proxies: true
     proxies:
-      - DIRECT
       - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
       
 
 rule-providers:
@@ -376,7 +421,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "hhttps://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Muse.yaml"
+    url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Muse.yaml"
     path: ./ruleset/Muse.yaml
     interval: 86400
   OpenAI:
@@ -485,8 +530,6 @@ rules:
   - RULE-SET,YouTube,📺 YouTube
   # ---- 4. Telegram ----
   - RULE-SET,Telegram,📲 Telegram
-  # ---- 4. Whatsapp ----
-  - RULE-SET,Whatsapp,🫧 Whatsapp
   # ---- 5. Google ----
   - RULE-SET,Google,🔍 Google
   # ---- 6. Microsoft ----
@@ -496,6 +539,7 @@ rules:
   - RULE-SET,TikTok,🌍 海外社交
   - RULE-SET,Twitter,🌍 海外社交
   - RULE-SET,Facebook,🌍 海外社交
+  - RULE-SET,Whatsapp,🌍 海外社交
   # ---- 8. 海外流媒体 ----
   - RULE-SET,Netflix,🎬 海外流媒体
   - RULE-SET,Spotify,🎬 海外流媒体
@@ -526,4 +570,3 @@ rules:
   - GEOIP,CN,🇨🇳 国内直连
   - RULE-SET,Global,🐟 兜底
   - MATCH,🐟 兜底
-
