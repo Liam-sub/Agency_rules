@@ -89,6 +89,13 @@ proxy-groups:
       - "🚀 节点选择"
       - "♻️ 自动选择"
       - DIRECT
+  - name: "🫧 Whatsapp"
+    type: select
+    include-all-proxies: true
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - DIRECT
   - name: "🔍 Google"
     type: select
     include-all-proxies: true
@@ -478,6 +485,8 @@ rules:
   - RULE-SET,YouTube,📺 YouTube
   # ---- 4. Telegram ----
   - RULE-SET,Telegram,📲 Telegram
+  # ---- 4. Whatsapp ----
+  - RULE-SET,Whatsapp,🫧 Whatsapp
   # ---- 5. Google ----
   - RULE-SET,Google,🔍 Google
   # ---- 6. Microsoft ----
@@ -487,7 +496,6 @@ rules:
   - RULE-SET,TikTok,🌍 海外社交
   - RULE-SET,Twitter,🌍 海外社交
   - RULE-SET,Facebook,🌍 海外社交
-  - RULE-SET,Whatsapp,🌍 海外社交
   # ---- 8. 海外流媒体 ----
   - RULE-SET,Netflix,🎬 海外流媒体
   - RULE-SET,Spotify,🎬 海外流媒体
