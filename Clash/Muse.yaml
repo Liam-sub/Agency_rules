@@ -3,5 +3,6 @@
 payload:
   - DOMAIN-SUFFIX, meta.com
   - DOMAIN-SUFFIX, museai.im
+  - DOMAIN-SUFFIX, muse.ai
   - DOMAIN-KEYWORD, museai
   - DOMAIN-KEYWORD, muse
