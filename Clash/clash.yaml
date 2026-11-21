@@ -1,43 +1,9 @@
-# ============================================================
-# FlClash 本地完整配置（节点 + 修复后的规则）
-# 节点来源：订阅 label "xx"  https://dmit-2.04051314.xyz:2096/liam-sub/8blqhfrbrhpzn7ml
-# 导入方式：FlClash → 配置 → 新建 → 类型「本地文件」→ 选本文件 → 启用
-# ⚠️ 必须先在 FlClash → 设置 → 覆写 里关掉「DNS 覆写」，否则下面 dns 段会被覆盖
-# ⚠️ 想用 WhatsApp 桌面版：再打开「虚拟网卡(TUN)」
-# ============================================================
 
 mode: rule
-log-level: info
-ipv6: false
+ipv6: true
 unified-delay: true
 tcp-concurrent: true
-find-process-mode: always
-
-proxies:
-  - name: "星总-107th0f9e1|📊141.19GB|⏳259D"
-    type: trojan
-    server: dmit-2.04051314.xyz
-    port: 48276
-    password: l86jeuljpbmn3tjx
-    network: tcp
-    tls: true
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    udp: true
-  - name: 临时
-    type: vless
-    server: vmiss.basic.05043096.xyz
-    port: 42537
-    uuid: 08c96541-2278-44f9-b5eb-0dc3297b813c
-    network: tcp
-    tls: true
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-    udp: true
+find-process-mode: strict
 
 dns:
   enable: true
@@ -78,23 +44,6 @@ dns:
 
   direct-nameserver-follow-policy: false
 
-# 嗅探：让纯 IP 连接也能还原出域名，从而命中域名规则（WhatsApp 大量走裸 IP）
-sniffer:
-  enable: true
-  parse-pure-ip: true
-  force-dns-mapping: true
-  override-destination: false
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: false
-    TLS:
-      ports: [443, 8443]
-      override-destination: false
-  skip-domain:
-    - 'Mijia Cloud'
-    - '+.push.apple.com'
-
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
@@ -108,6 +57,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     include-all-proxies: true
+  - name: "🛑 广告拦截"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
   - name: "🇨🇳 国内直连"
     type: select
     proxies:
@@ -182,20 +138,12 @@ proxy-groups:
       - "🚀 节点选择"
       - "♻️ 自动选择"
       - DIRECT
-  - name: "🛑 广告拦截"
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - "🚀 节点选择"
-      - "♻️ 自动选择"
   - name: "🐟 兜底"
     type: select
     include-all-proxies: true
     proxies:
-      - "🚀 节点选择"
-      - "♻️ 自动选择"
       - DIRECT
+      - "🚀 节点选择"
       
 
 rule-providers:
@@ -299,6 +247,31 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./ruleset/BiliBili.yaml
     interval: 86400
+  # --- 去广告（三个库互补：中文广告域名 / 国际广告域名 / 运营商劫持）---
+  Advertising:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising.yaml"
+    path: ./ruleset/Advertising.yaml
+    interval: 86400
+  adblockmihomo:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomo.mrs
+    path: ./ruleset/adblockmihomo.mrs
+    interval: 86400
+  # 更保守的替代（5,581 条，误伤更少）：把上面的 url 换成
+  #   .../adblockfilters@main/rules/adblockmihomolite.mrs
+  #   path 同步改成 ./ruleset/adblockmihomolite.mrs
+  Hijacking:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Hijacking/Hijacking.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
 
   # --- 代理类 ---
   YouTube:
@@ -396,7 +369,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Muse.yaml"
+    url: "hhttps://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Muse.yaml"
     path: ./ruleset/Muse.yaml
     interval: 86400
   OpenAI:
@@ -458,31 +431,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Asn_Overseas.yaml"
     path: ./ruleset/Asn_Overseas.yaml
     interval: 86400
-    # --- 去广告（三个库互补：中文广告域名 / 国际广告域名 / 运营商劫持）---
-  Advertising:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising.yaml"
-    path: ./ruleset/Advertising.yaml
-    interval: 86400
-  adblockmihomo:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://cdn.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomo.mrs
-    path: ./ruleset/adblockmihomo.mrs
-    interval: 86400
-  # 更保守的替代（5,581 条，误伤更少）：把上面的 url 换成
-  #   .../adblockfilters@main/rules/adblockmihomolite.mrs
-  #   path 同步改成 ./ruleset/adblockmihomolite.mrs
-  Hijacking:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Hijacking/Hijacking.yaml"
-    path: ./ruleset/Hijacking.yaml
-    interval: 86400
   # --- 兜底 ---
   Global:
     type: http
@@ -493,7 +441,12 @@ rule-providers:
     interval: 86400
 
 rules:
-
+  # ---- 去广告白名单：误伤的域名写在这两行之间，必须位于广告规则之前 ----
+  # - DOMAIN-SUFFIX,example.com,DIRECT
+  # ---- 广告拦截：域名大库 → 补充库(keyword+IP) → 运营商劫持 ----
+  - RULE-SET,adblockmihomo,🛑 广告拦截
+  - RULE-SET,Advertising,🛑 广告拦截
+  - RULE-SET,Hijacking,🛑 广告拦截
   # ---- 0. 局域网 / 保留地址 ----
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
@@ -552,21 +505,6 @@ rules:
   - RULE-SET,Asn_Overseas,🌊 海外Asn
   # ---- 手动代理清单 ----
   - RULE-SET,Proxy,🚀 节点选择
-  # ---- 11.5 Meta / WhatsApp 直连 IP 段（不依赖 IP-ASN 库，保证语音/裸 IP 连接也走代理）----
-  - IP-CIDR,157.240.0.0/16,🌍 海外社交,no-resolve
-  - IP-CIDR,31.13.24.0/21,🌍 海外社交,no-resolve
-  - IP-CIDR,129.134.0.0/16,🌍 海外社交,no-resolve
-  - IP-CIDR,102.132.96.0/20,🌍 海外社交,no-resolve
-  - IP-CIDR,163.70.128.0/17,🌍 海外社交,no-resolve
-  - IP-CIDR,179.60.192.0/22,🌍 海外社交,no-resolve
-  - IP-CIDR,185.60.216.0/22,🌍 海外社交,no-resolve
-  - IP-CIDR,57.141.0.0/16,🌍 海外社交,no-resolve
-  # ---- 去广告白名单：误伤的域名写在这两行之间，必须位于广告规则之前 ----
-  # - DOMAIN-SUFFIX,example.com,DIRECT
-  # ---- 广告拦截：域名大库 → 补充库(keyword+IP) → 运营商劫持 ----
-  - RULE-SET,adblockmihomo,🛑 广告拦截
-  - RULE-SET,Advertising,🛑 广告拦截
-  - RULE-SET,Hijacking,🛑 广告拦截
   # ---- 12. 兜底 ----
   - GEOIP,CN,🇨🇳 国内直连
   - RULE-SET,Global,🐟 兜底
