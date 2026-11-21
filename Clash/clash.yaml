@@ -344,7 +344,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "hhttps://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/Muse.yaml"
+    url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/main/Clash/Muse.yaml"
     path: ./ruleset/Muse.yaml
     interval: 86400
   OpenAI:
