@@ -152,7 +152,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml"
     path: ./ruleset/China.yaml
     interval: 86400
   #ChinaIPs:
@@ -166,7 +166,7 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DingTalk/DingTalk.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DingTalk/DingTalk.yaml"
     path: ./ruleset/DingTalk.yaml
     interval: 86400
   WeChat:
@@ -180,49 +180,49 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DouYin/DouYin.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin.yaml"
     path: ./ruleset/DouYin.yaml
     interval: 86400
   Tencent:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tencent/Tencent.yaml"
     path: ./ruleset/Tencent.yaml
     interval: 86400
   YouKu:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Youku/Youku.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Youku/Youku.yaml"
     path: ./ruleset/YouKu.yaml
     interval: 86400
   BaiDu:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Baidu/Baidu.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu.yaml"
     path: ./ruleset/BaiDu.yaml
     interval: 86400
   Direct:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml"
     path: ./ruleset/Direct.yaml
     interval: 86400
   JingDong:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/JingDong/JingDong.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong.yaml"
     path: ./ruleset/JingDong.yaml
     interval: 86400
   Sina:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Sina/Sina.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sina/Sina.yaml"
     path: ./ruleset/Sina.yaml
     interval: 86400
 
@@ -230,21 +230,21 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/iQIYI/iQIYI.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iQIYI/iQIYI.yaml"
     path: ./ruleset/iQIYI.yaml
     interval: 86400
   Alibaba:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Alibaba/Alibaba.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Alibaba/Alibaba.yaml"
     path: ./ruleset/Alibaba.yaml
     interval: 86400
   BiliBili:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./ruleset/BiliBili.yaml
     interval: 86400
 
@@ -253,91 +253,91 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
     path: ./ruleset/YouTube.yaml
     interval: 86400
   Telegram:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
     path: ./ruleset/Telegram.yaml
     interval: 86400
   Google:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
     path: ./ruleset/Google.yaml
     interval: 86400
   Microsoft:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
     path: ./ruleset/Microsoft.yaml
     interval: 86400
   Instagram:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml"
     path: ./ruleset/Instagram.yaml
     interval: 86400
   TikTok:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
     path: ./ruleset/TikTok.yaml
     interval: 86400
   Twitter:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
     path: ./ruleset/Twitter.yaml
     interval: 86400
   Facebook:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
     path: ./ruleset/Facebook.yaml
     interval: 86400
   Whatsapp:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Whatsapp/Whatsapp.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml"
     path: ./ruleset/Whatsapp.yaml
     interval: 86400
   Netflix:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
     path: ./ruleset/Netflix.yaml
     interval: 86400
   Apple:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
     path: ./ruleset/Apple.yaml
     interval: 86400
   Amazon:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Amazon/Amazon.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.yaml"
     path: ./ruleset/Amazon.yaml
     interval: 86400
   GitHub:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
     path: ./ruleset/GitHub.yaml
     interval: 86400
   Muse:
@@ -351,14 +351,14 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
     path: ./ruleset/OpenAI.yaml
     interval: 86400
   Gemini:
     type: http
     behavior: classical
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml"
     path: ./ruleset/Gemini.yaml
     interval: 86400
   Claude:
@@ -367,13 +367,6 @@ rule-providers:
     format: yaml
     url: "https://raw.githubusercontent.com/Liam-sub/Agency_rules/refs/heads/main/Clash/claudecode.yaml"
     path: ./ruleset/Claude.yaml
-    interval: 86400
-  BardAI:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml"
-    path: ./ruleset/BardAI.yaml
     interval: 86400
 
   Spotify:
@@ -494,7 +487,6 @@ rules:
   - RULE-SET,OpenAI,🤖 AI 服务
   - RULE-SET,Gemini,🤖 AI 服务
   - RULE-SET,Claude,🤖 AI 服务
-  - RULE-SET,BardAI,🤖 AI 服务
   # ---- 11. Asn_海外 ----
   - RULE-SET,Asn_Overseas,🌊 海外Asn
   # ---- 手动代理清单 ----
