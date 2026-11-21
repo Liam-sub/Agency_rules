@@ -498,6 +498,8 @@ rules:
   - RULE-SET,Advertising,🛑 广告拦截
   - RULE-SET,Hijacking,🛑 广告拦截
   # ---- 12. 兜底 ----
+  - DOMAIN-KEYWORD,github,🚀 节点选择
   - GEOIP,CN,🇨🇳 国内直连
+  - GEOIP,US,🚀 节点选择
   - RULE-SET,Global,🐟 兜底
   - MATCH,🐟 兜底
